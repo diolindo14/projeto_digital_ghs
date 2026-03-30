@@ -1,0 +1,475 @@
+{
+    "anos": [
+        {
+            "id": 1,
+            "numero": 1,
+            "nome": "1\u00ba Ano",
+            "descricao": "Fundamentos",
+            "mensalidade": "26500.00",
+            "ordem": 1
+        },
+        {
+            "id": 2,
+            "numero": 2,
+            "nome": "2\u00ba Ano",
+            "descricao": "Bases T\u00e9cnicas",
+            "mensalidade": "29000.00",
+            "ordem": 2
+        },
+        {
+            "id": 3,
+            "numero": 3,
+            "nome": "3\u00ba Ano",
+            "descricao": "Desenvolvimento",
+            "mensalidade": "29000.00",
+            "ordem": 3
+        },
+        {
+            "id": 4,
+            "numero": 4,
+            "nome": "4\u00ba Ano",
+            "descricao": "Avan\u00e7ado",
+            "mensalidade": "31500.00",
+            "ordem": 4
+        },
+        {
+            "id": 5,
+            "numero": 5,
+            "nome": "5\u00ba Ano",
+            "descricao": "Especializa\u00e7\u00e3o",
+            "mensalidade": "35000.00",
+            "ordem": 5
+        }
+    ],
+    "turmas": [
+        {
+            "id": 7,
+            "codigo": "GHS-4T1",
+            "ano_id": 4,
+            "turno": "Tarde",
+            "numero_turma": 2,
+            "sala_principal": "Laboratorio 2",
+            "vagas": 15,
+            "ativa": 1,
+            "data_criacao": "2026-03-22 20:36:25"
+        },
+        {
+            "id": 9,
+            "codigo": "GHS-3T1",
+            "ano_id": 3,
+            "turno": "Tarde",
+            "numero_turma": 3,
+            "sala_principal": "",
+            "vagas": 15,
+            "ativa": 1,
+            "data_criacao": "2026-03-23 00:48:57"
+        },
+        {
+            "id": 10,
+            "codigo": "GHS-1M1",
+            "ano_id": 1,
+            "turno": "Manh\u00e3",
+            "numero_turma": 1,
+            "sala_principal": "1",
+            "vagas": 34,
+            "ativa": 1,
+            "data_criacao": "2026-03-23 05:55:32"
+        },
+        {
+            "id": 11,
+            "codigo": "GHS-1T1",
+            "ano_id": 1,
+            "turno": "Tarde",
+            "numero_turma": 1,
+            "sala_principal": "1",
+            "vagas": 30,
+            "ativa": 1,
+            "data_criacao": "2026-03-23 05:56:11"
+        },
+        {
+            "id": 12,
+            "codigo": "GHS-1N1",
+            "ano_id": 1,
+            "turno": "Noite",
+            "numero_turma": 1,
+            "sala_principal": "1",
+            "vagas": 30,
+            "ativa": 1,
+            "data_criacao": "2026-03-23 05:56:39"
+        },
+        {
+            "id": 13,
+            "codigo": "GHS-2M1",
+            "ano_id": 2,
+            "turno": "Manh\u00e3",
+            "numero_turma": 1,
+            "sala_principal": "2",
+            "vagas": 20,
+            "ativa": 1,
+            "data_criacao": "2026-03-23 05:57:15"
+        },
+        {
+            "id": 14,
+            "codigo": "GHS-2T2",
+            "ano_id": 2,
+            "turno": "Tarde",
+            "numero_turma": 1,
+            "sala_principal": "Sala 02",
+            "vagas": 16,
+            "ativa": 1,
+            "data_criacao": "2026-03-23 05:58:46"
+        },
+        {
+            "id": 15,
+            "codigo": "GHS-2N2",
+            "ano_id": 2,
+            "turno": "Noite",
+            "numero_turma": 1,
+            "sala_principal": "Sala 02",
+            "vagas": 13,
+            "ativa": 1,
+            "data_criacao": "2026-03-23 05:59:53"
+        },
+        {
+            "id": 16,
+            "codigo": "GHS-3M1",
+            "ano_id": 3,
+            "turno": "Manh\u00e3",
+            "numero_turma": 3,
+            "sala_principal": "Sala 03",
+            "vagas": 18,
+            "ativa": 1,
+            "data_criacao": "2026-03-23 06:01:21"
+        },
+        {
+            "id": 17,
+            "codigo": "GHS-3N1",
+            "ano_id": 3,
+            "turno": "Noite",
+            "numero_turma": 3,
+            "sala_principal": "Sala 03",
+            "vagas": 10,
+            "ativa": 1,
+            "data_criacao": "2026-03-23 06:02:03"
+        },
+        {
+            "id": 18,
+            "codigo": "GHS-4N1",
+            "ano_id": 4,
+            "turno": "Noite",
+            "numero_turma": 4,
+            "sala_principal": "Sala 04",
+            "vagas": 12,
+            "ativa": 1,
+            "data_criacao": "2026-03-23 06:03:01"
+        },
+        {
+            "id": 19,
+            "codigo": "GHS-ESP3",
+            "ano_id": 5,
+            "turno": "Noite",
+            "numero_turma": 5,
+            "sala_principal": "Sala 05",
+            "vagas": 11,
+            "ativa": 1,
+            "data_criacao": "2026-03-23 06:05:00"
+        },
+        {
+            "id": 20,
+            "codigo": "GHS-ESP4",
+            "ano_id": 5,
+            "turno": "Tarde",
+            "numero_turma": 5,
+            "sala_principal": "Sala 05",
+            "vagas": 13,
+            "ativa": 1,
+            "data_criacao": "2026-03-23 06:06:28"
+        }
+    ],
+    "disciplinas": [
+        {
+            "id": 1,
+            "nome": "Matem\u00e1tica",
+            "codigo": "MAT1"
+        },
+        {
+            "id": 2,
+            "nome": "F\u00edsica",
+            "codigo": "FIS1"
+        },
+        {
+            "id": 3,
+            "nome": "Portugu\u00eas",
+            "codigo": "POR1"
+        },
+        {
+            "id": 4,
+            "nome": "Tecnologias Inform\u00e1ticas",
+            "codigo": "TEC1"
+        },
+        {
+            "id": 5,
+            "nome": "Aplica\u00e7\u00f5es Inform\u00e1ticas",
+            "codigo": "API1"
+        },
+        {
+            "id": 6,
+            "nome": "Geom\u00e9trica Descritivas A e B",
+            "codigo": "GEO1"
+        },
+        {
+            "id": 7,
+            "nome": "Ingl\u00eas",
+            "codigo": "ING1"
+        },
+        {
+            "id": 8,
+            "nome": "Qu\u00edmica",
+            "codigo": "QUI1"
+        },
+        {
+            "id": 9,
+            "nome": "Metodologia Cient\u00edfica \u2014 Guia para Efici\u00eancias nos Estudos",
+            "codigo": "MET1"
+        },
+        {
+            "id": 10,
+            "nome": "An\u00e1lise Matem\u00e1tica",
+            "codigo": "AMA2"
+        },
+        {
+            "id": 11,
+            "nome": "Fundamentos de Arquitetura de Computadores",
+            "codigo": "ARC2"
+        },
+        {
+            "id": 12,
+            "nome": "\u00c1lgebra Linear, Geom\u00e9trica Anal\u00edtica Vetorial",
+            "codigo": "ALG2"
+        },
+        {
+            "id": 13,
+            "nome": "Mec\u00e2nica e Electricidade",
+            "codigo": "MEC2"
+        },
+        {
+            "id": 14,
+            "nome": "Introdu\u00e7\u00e3o a Programa\u00e7\u00e3o",
+            "codigo": "IPR2"
+        },
+        {
+            "id": 15,
+            "nome": "Circuitos para Comunica\u00e7\u00f5es",
+            "codigo": "CIR2"
+        },
+        {
+            "id": 16,
+            "nome": "Programa\u00e7\u00e3o Orientada a Objectos",
+            "codigo": "POO2"
+        },
+        {
+            "id": 17,
+            "nome": "Algoritmos e Estruturas de Dados",
+            "codigo": "AED2"
+        },
+        {
+            "id": 18,
+            "nome": "Portugu\u00eas",
+            "codigo": "POR2"
+        },
+        {
+            "id": 19,
+            "nome": "Ingl\u00eas",
+            "codigo": "ING2"
+        },
+        {
+            "id": 20,
+            "nome": "Gest\u00e3o e Contabilidade Empresarial",
+            "codigo": "GCE3"
+        },
+        {
+            "id": 21,
+            "nome": "Bases de Dados",
+            "codigo": "BD3"
+        },
+        {
+            "id": 22,
+            "nome": "Sistemas Operativos",
+            "codigo": "SO3"
+        },
+        {
+            "id": 23,
+            "nome": "Teoria da Computa\u00e7\u00e3o",
+            "codigo": "TC3"
+        },
+        {
+            "id": 24,
+            "nome": "Hardware e Microprocessador",
+            "codigo": "HARD3"
+        },
+        {
+            "id": 25,
+            "nome": "Redes Digitais \u2014 Fundamentos",
+            "codigo": "RD13"
+        },
+        {
+            "id": 26,
+            "nome": "Concep\u00e7\u00e3o e Desenvolvimento de Sistemas",
+            "codigo": "CDS3"
+        },
+        {
+            "id": 27,
+            "nome": "Programa\u00e7\u00e3o em Rede - HTML e CSS",
+            "codigo": "PR3"
+        },
+        {
+            "id": 28,
+            "nome": "EDP",
+            "codigo": "EDP4"
+        },
+        {
+            "id": 29,
+            "nome": "Multim\u00e9dia e Computa\u00e7\u00e3o Gr\u00e1fica",
+            "codigo": "MCG4"
+        },
+        {
+            "id": 30,
+            "nome": "Redes Digitais \u2014 Sistemas, Aplica\u00e7\u00e3o e Servi\u00e7os",
+            "codigo": "RD24"
+        },
+        {
+            "id": 31,
+            "nome": "Intelig\u00eancia Artificial",
+            "codigo": "IA4"
+        },
+        {
+            "id": 32,
+            "nome": "MC",
+            "codigo": "MC4"
+        },
+        {
+            "id": 33,
+            "nome": "Engenharia de Software",
+            "codigo": "ES4"
+        },
+        {
+            "id": 34,
+            "nome": "Tecnologia para Sistemas Inteligentes",
+            "codigo": "TSI4"
+        },
+        {
+            "id": 35,
+            "nome": "Concep\u00e7\u00e3o e Desenvolvimento de Sistemas Inform\u00e1ticos",
+            "codigo": "CDSI4"
+        },
+        {
+            "id": 36,
+            "nome": "Intera\u00e7\u00e3o Pessoa\u2013M\u00e1quina",
+            "codigo": "IPM4"
+        },
+        {
+            "id": 37,
+            "nome": "Processamento de Informa\u00e7\u00e3o",
+            "codigo": "PI4"
+        },
+        {
+            "id": 38,
+            "nome": "Metodologia Cient\u00edfica",
+            "codigo": "MET4"
+        },
+        {
+            "id": 39,
+            "nome": "\u00c9tica e Deontologia Profissional",
+            "codigo": ""
+        }
+    ],
+    "professores": [
+        {
+            "id": 1,
+            "nome_completo": "Domingos Correia"
+        },
+        {
+            "id": 2,
+            "nome_completo": "Justino Gomes"
+        },
+        {
+            "id": 3,
+            "nome_completo": "Domingos Insumb\u00fa"
+        },
+        {
+            "id": 4,
+            "nome_completo": "Mamadu Bentem Jal\u00f3"
+        },
+        {
+            "id": 5,
+            "nome_completo": "Oscar Gomes Romero"
+        },
+        {
+            "id": 6,
+            "nome_completo": "Samba Djob"
+        },
+        {
+            "id": 7,
+            "nome_completo": "Estev\u00e3o Siga"
+        },
+        {
+            "id": 8,
+            "nome_completo": "Didier Fernandes"
+        },
+        {
+            "id": 9,
+            "nome_completo": "Valdemar Melicio"
+        },
+        {
+            "id": 10,
+            "nome_completo": "Sampum Nan Sum"
+        }
+    ],
+    "tipos_avaliacao": [
+        {
+            "id": 1,
+            "codigo": "TPC",
+            "nome": "Trabalho para Casa",
+            "pontuacao_maxima": "2.00",
+            "peso_relativo": null,
+            "ordem": 1,
+            "ativo": 1
+        },
+        {
+            "id": 2,
+            "codigo": "AP",
+            "nome": "Apresenta\u00e7\u00e3o",
+            "pontuacao_maxima": "3.00",
+            "peso_relativo": null,
+            "ordem": 2,
+            "ativo": 1
+        },
+        {
+            "id": 3,
+            "codigo": "TPI",
+            "nome": "Trabalho Pr\u00e1tico Individual",
+            "pontuacao_maxima": "5.00",
+            "peso_relativo": null,
+            "ordem": 3,
+            "ativo": 1
+        },
+        {
+            "id": 4,
+            "codigo": "CE",
+            "nome": "Chamada Escrita",
+            "pontuacao_maxima": "10.00",
+            "peso_relativo": null,
+            "ordem": 4,
+            "ativo": 1
+        },
+        {
+            "id": 5,
+            "codigo": "EX",
+            "nome": "Exame Semestral",
+            "pontuacao_maxima": "20.00",
+            "peso_relativo": null,
+            "ordem": 5,
+            "ativo": 1
+        }
+    ]
+}

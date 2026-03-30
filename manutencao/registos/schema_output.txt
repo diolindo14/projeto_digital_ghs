@@ -1,0 +1,49 @@
+--- estudantes ---
+id                   | int(11)         | NO   
+utilizador_id        | int(11)         | NO   
+bi                   | varchar(20)     | NO   
+data_nascimento      | date            | NO   
+nacionalidade        | varchar(50)     | YES  
+sexo                 | enum('Masculino','Feminino') | NO   
+estado_civil         | enum('Solteiro','Casado','Divorciado','Viúvo') | YES  
+telefone             | varchar(20)     | NO   
+telefone_alternativo | varchar(20)     | YES  
+morada               | text            | YES  
+bairro               | varchar(100)    | YES  
+cidade               | varchar(100)    | YES  
+nome_encarregado     | varchar(100)    | YES  
+telefone_encarregado | varchar(20)     | YES  
+escola_proveniencia  | varchar(100)    | YES  
+ano_conclusao        | int(11)         | YES  
+media_final          | decimal(4,2)    | YES  
+foto_perfil          | varchar(255)    | YES  
+data_criacao         | timestamp       | NO   
+data_atualizacao     | timestamp       | NO   
+
+--- matriculas ---
+id                   | int(11)         | NO   
+estudante_id         | int(11)         | NO   
+ano_letivo           | year(4)         | NO   
+ano_curso_id         | int(11)         | NO   
+turma_id             | int(11)         | YES  
+especializacao_id    | int(11)         | YES  
+turno                | enum('Manhã','Tarde','Noite') | NO   
+tipo                 | enum('Novo Ingresso','Estudante Interno') | NO   
+status               | enum('Pendente','Em validacao','Aprovada','Rejeitada') | YES  
+numero_processo      | varchar(20)     | YES  
+data_matricula       | date            | NO   
+observacoes          | text            | YES  
+aprovado_por         | int(11)         | YES  
+data_aprovacao       | date            | YES  
+motivo_rejeicao      | text            | YES  
+data_criacao         | timestamp       | NO   
+data_atualizacao     | timestamp       | NO   
+
+--- anos ---
+id                   | int(11)         | NO   
+numero               | tinyint(4)      | NO   
+nome                 | varchar(20)     | NO   
+descricao            | varchar(100)    | YES  
+mensalidade          | decimal(10,2)   | NO   
+ordem                | tinyint(4)      | NO   
+

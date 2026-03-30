@@ -1,0 +1,15 @@
+D:29 | Multimédia e Computação Gráfica -> Prof:12 (Samba Djob)
+D:38 | Metodologia Científica -> Prof:12 (Samba Djob)
+D:30 | Redes Digitais — Sistemas, Aplicação e Serviços -> Prof:13 (Domingos Correia)
+
+Total rows na tabela horarios para turma 7:
+ - IA => Prof: 12
+ - Redes Digitais — Sistemas, Aplicação e Serviços => Prof: 13
+ - MC => Prof: 12
+ - MC => Prof: 12
+ - ES => Prof: 12
+ - ES => Prof: 12
+ - TSI => Prof: 12
+ - TSI => Prof: 12
+ - Sistemas de Informação e Decisão => Prof: 12
+ - Sistemas de Informação e Decisão => Prof: 12

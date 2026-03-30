@@ -1,0 +1,11 @@
+
+PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`ghsespf_db`.`horarios`, CONSTRAINT `horarios_ibfk_3` FOREIGN KEY (`professor_id`) REFERENCES `professores` (`id`) ON DELETE CASCADE) in C:\xampp\htdocs\green\tmp_seed_horarios.php:195
+Fatal error: Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`ghsespf_db`.`horarios`, CONSTRAINT `horarios_ibfk_3` FOREIGN KEY (`professor_id`) REFERENCES `professores` (`id`) ON DELETE CASCADE) in C:\xampp\htdocs\green\tmp_seed_horarios.php:195
+Stack trace:
+#0 C:\xampp\htdocs\green\tmp_seed_horarios.php(195): PDOStatement->execute(Array)
+#1 {main}
+  thrown in C:\xampp\htdocs\green\tmp_seed_horarios.php on line 195
+Stack trace:
+#0 C:\xampp\htdocs\green\tmp_seed_horarios.php(195): PDOStatement->execute(Array)
+#1 {main}
+  thrown in C:\xampp\htdocs\green\tmp_seed_horarios.php on line 195

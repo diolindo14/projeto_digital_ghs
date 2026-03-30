@@ -1,0 +1,282 @@
+[
+    {
+        "id": 11,
+        "professor_id": 1,
+        "disciplina_id": 30,
+        "turma_id": 7,
+        "ano_letivo": "2026",
+        "data_criacao": "2026-03-23 16:58:38",
+        "professor_nome": "Domingos Correia",
+        "disciplina_nome": "Redes Digitais \u2014 Sistemas, Aplica\u00e7\u00e3o e Servi\u00e7os"
+    },
+    {
+        "id": 18,
+        "professor_id": 2,
+        "disciplina_id": 23,
+        "turma_id": 9,
+        "ano_letivo": "2026",
+        "data_criacao": "2026-03-24 02:23:17",
+        "professor_nome": "Justino Gomes",
+        "disciplina_nome": "Teoria da Computa\u00e7\u00e3o"
+    },
+    {
+        "id": 17,
+        "professor_id": 2,
+        "disciplina_id": 23,
+        "turma_id": 16,
+        "ano_letivo": "2026",
+        "data_criacao": "2026-03-24 02:23:17",
+        "professor_nome": "Justino Gomes",
+        "disciplina_nome": "Teoria da Computa\u00e7\u00e3o"
+    },
+    {
+        "id": 19,
+        "professor_id": 2,
+        "disciplina_id": 23,
+        "turma_id": 17,
+        "ano_letivo": "2026",
+        "data_criacao": "2026-03-24 02:23:18",
+        "professor_nome": "Justino Gomes",
+        "disciplina_nome": "Teoria da Computa\u00e7\u00e3o"
+    },
+    {
+        "id": 12,
+        "professor_id": 3,
+        "disciplina_id": 6,
+        "turma_id": 10,
+        "ano_letivo": "2026",
+        "data_criacao": "2026-03-24 00:36:26",
+        "professor_nome": "Domingos Insumb\u00fa",
+        "disciplina_nome": "Geom\u00e9trica Descritivas A e B"
+    },
+    {
+        "id": 13,
+        "professor_id": 3,
+        "disciplina_id": 8,
+        "turma_id": 10,
+        "ano_letivo": "2026",
+        "data_criacao": "2026-03-24 00:36:26",
+        "professor_nome": "Domingos Insumb\u00fa",
+        "disciplina_nome": "Qu\u00edmica"
+    },
+    {
+        "id": 25,
+        "professor_id": 4,
+        "disciplina_id": 9,
+        "turma_id": 10,
+        "ano_letivo": "2026",
+        "data_criacao": "2026-03-24 02:27:06",
+        "professor_nome": "Mamadu Bentem Jal\u00f3",
+        "disciplina_nome": "Metodologia Cient\u00edfica \u2014 Guia para Efici\u00eancias nos Estudos"
+    },
+    {
+        "id": 26,
+        "professor_id": 4,
+        "disciplina_id": 9,
+        "turma_id": 11,
+        "ano_letivo": "2026",
+        "data_criacao": "2026-03-24 02:27:06",
+        "professor_nome": "Mamadu Bentem Jal\u00f3",
+        "disciplina_nome": "Metodologia Cient\u00edfica \u2014 Guia para Efici\u00eancias nos Estudos"
+    },
+    {
+        "id": 27,
+        "professor_id": 4,
+        "disciplina_id": 9,
+        "turma_id": 12,
+        "ano_letivo": "2026",
+        "data_criacao": "2026-03-24 02:27:06",
+        "professor_nome": "Mamadu Bentem Jal\u00f3",
+        "disciplina_nome": "Metodologia Cient\u00edfica \u2014 Guia para Efici\u00eancias nos Estudos"
+    },
+    {
+        "id": 28,
+        "professor_id": 4,
+        "disciplina_id": 39,
+        "turma_id": 7,
+        "ano_letivo": "2026",
+        "data_criacao": "2026-03-24 02:27:06",
+        "professor_nome": "Mamadu Bentem Jal\u00f3",
+        "disciplina_nome": "\u00c9tica e Deontologia Profissional"
+    },
+    {
+        "id": 29,
+        "professor_id": 4,
+        "disciplina_id": 39,
+        "turma_id": 18,
+        "ano_letivo": "2026",
+        "data_criacao": "2026-03-24 02:27:06",
+        "professor_nome": "Mamadu Bentem Jal\u00f3",
+        "disciplina_nome": "\u00c9tica e Deontologia Profissional"
+    },
+    {
+        "id": 31,
+        "professor_id": 5,
+        "disciplina_id": 21,
+        "turma_id": 19,
+        "ano_letivo": "2026",
+        "data_criacao": "2026-03-24 02:31:22",
+        "professor_nome": "Oscar Gomes Romero",
+        "disciplina_nome": "Bases de Dados"
+    },
+    {
+        "id": 32,
+        "professor_id": 5,
+        "disciplina_id": 27,
+        "turma_id": 9,
+        "ano_letivo": "2026",
+        "data_criacao": "2026-03-24 02:31:22",
+        "professor_nome": "Oscar Gomes Romero",
+        "disciplina_nome": "Programa\u00e7\u00e3o em Rede - HTML e CSS"
+    },
+    {
+        "id": 30,
+        "professor_id": 5,
+        "disciplina_id": 27,
+        "turma_id": 16,
+        "ano_letivo": "2026",
+        "data_criacao": "2026-03-24 02:31:22",
+        "professor_nome": "Oscar Gomes Romero",
+        "disciplina_nome": "Programa\u00e7\u00e3o em Rede - HTML e CSS"
+    },
+    {
+        "id": 33,
+        "professor_id": 6,
+        "disciplina_id": 4,
+        "turma_id": 10,
+        "ano_letivo": "2026",
+        "data_criacao": "2026-03-24 02:35:02",
+        "professor_nome": "Samba Djob",
+        "disciplina_nome": "Tecnologias Inform\u00e1ticas"
+    },
+    {
+        "id": 35,
+        "professor_id": 6,
+        "disciplina_id": 4,
+        "turma_id": 11,
+        "ano_letivo": "2026",
+        "data_criacao": "2026-03-24 02:35:02",
+        "professor_nome": "Samba Djob",
+        "disciplina_nome": "Tecnologias Inform\u00e1ticas"
+    },
+    {
+        "id": 34,
+        "professor_id": 6,
+        "disciplina_id": 4,
+        "turma_id": 12,
+        "ano_letivo": "2026",
+        "data_criacao": "2026-03-24 02:35:02",
+        "professor_nome": "Samba Djob",
+        "disciplina_nome": "Tecnologias Inform\u00e1ticas"
+    },
+    {
+        "id": 36,
+        "professor_id": 6,
+        "disciplina_id": 5,
+        "turma_id": 10,
+        "ano_letivo": "2026",
+        "data_criacao": "2026-03-24 02:35:02",
+        "professor_nome": "Samba Djob",
+        "disciplina_nome": "Aplica\u00e7\u00f5es Inform\u00e1ticas"
+    },
+    {
+        "id": 38,
+        "professor_id": 6,
+        "disciplina_id": 5,
+        "turma_id": 11,
+        "ano_letivo": "2026",
+        "data_criacao": "2026-03-24 02:35:02",
+        "professor_nome": "Samba Djob",
+        "disciplina_nome": "Aplica\u00e7\u00f5es Inform\u00e1ticas"
+    },
+    {
+        "id": 37,
+        "professor_id": 6,
+        "disciplina_id": 5,
+        "turma_id": 12,
+        "ano_letivo": "2026",
+        "data_criacao": "2026-03-24 02:35:02",
+        "professor_nome": "Samba Djob",
+        "disciplina_nome": "Aplica\u00e7\u00f5es Inform\u00e1ticas"
+    },
+    {
+        "id": 40,
+        "professor_id": 6,
+        "disciplina_id": 29,
+        "turma_id": 7,
+        "ano_letivo": "2026",
+        "data_criacao": "2026-03-24 02:35:02",
+        "professor_nome": "Samba Djob",
+        "disciplina_nome": "Multim\u00e9dia e Computa\u00e7\u00e3o Gr\u00e1fica"
+    },
+    {
+        "id": 39,
+        "professor_id": 6,
+        "disciplina_id": 29,
+        "turma_id": 18,
+        "ano_letivo": "2026",
+        "data_criacao": "2026-03-24 02:35:02",
+        "professor_nome": "Samba Djob",
+        "disciplina_nome": "Multim\u00e9dia e Computa\u00e7\u00e3o Gr\u00e1fica"
+    },
+    {
+        "id": 42,
+        "professor_id": 6,
+        "disciplina_id": 38,
+        "turma_id": 7,
+        "ano_letivo": "2026",
+        "data_criacao": "2026-03-24 02:35:02",
+        "professor_nome": "Samba Djob",
+        "disciplina_nome": "Metodologia Cient\u00edfica"
+    },
+    {
+        "id": 41,
+        "professor_id": 6,
+        "disciplina_id": 38,
+        "turma_id": 18,
+        "ano_letivo": "2026",
+        "data_criacao": "2026-03-24 02:35:02",
+        "professor_nome": "Samba Djob",
+        "disciplina_nome": "Metodologia Cient\u00edfica"
+    },
+    {
+        "id": 14,
+        "professor_id": 7,
+        "disciplina_id": 14,
+        "turma_id": 13,
+        "ano_letivo": "2026",
+        "data_criacao": "2026-03-24 02:21:20",
+        "professor_nome": "Estev\u00e3o Siga",
+        "disciplina_nome": "Introdu\u00e7\u00e3o a Programa\u00e7\u00e3o"
+    },
+    {
+        "id": 15,
+        "professor_id": 7,
+        "disciplina_id": 31,
+        "turma_id": 7,
+        "ano_letivo": "2026",
+        "data_criacao": "2026-03-24 02:21:20",
+        "professor_nome": "Estev\u00e3o Siga",
+        "disciplina_nome": "Intelig\u00eancia Artificial"
+    },
+    {
+        "id": 16,
+        "professor_id": 7,
+        "disciplina_id": 34,
+        "turma_id": 7,
+        "ano_letivo": "2026",
+        "data_criacao": "2026-03-24 02:21:20",
+        "professor_nome": "Estev\u00e3o Siga",
+        "disciplina_nome": "Tecnologia para Sistemas Inteligentes"
+    },
+    {
+        "id": 10,
+        "professor_id": 8,
+        "disciplina_id": 33,
+        "turma_id": 7,
+        "ano_letivo": "2026",
+        "data_criacao": "2026-03-23 16:55:13",
+        "professor_nome": "Didier Fernandes",
+        "disciplina_nome": "Engenharia de Software"
+    }
+]

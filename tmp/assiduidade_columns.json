@@ -1,0 +1,74 @@
+[
+    {
+        "Field": "id",
+        "Type": "int(11)",
+        "Null": "NO",
+        "Key": "PRI",
+        "Default": null,
+        "Extra": "auto_increment"
+    },
+    {
+        "Field": "professor_id",
+        "Type": "int(11)",
+        "Null": "YES",
+        "Key": "MUL",
+        "Default": null,
+        "Extra": ""
+    },
+    {
+        "Field": "turma_id",
+        "Type": "int(11)",
+        "Null": "YES",
+        "Key": "",
+        "Default": null,
+        "Extra": ""
+    },
+    {
+        "Field": "disciplina_id",
+        "Type": "int(11)",
+        "Null": "YES",
+        "Key": "",
+        "Default": null,
+        "Extra": ""
+    },
+    {
+        "Field": "data",
+        "Type": "date",
+        "Null": "YES",
+        "Key": "",
+        "Default": null,
+        "Extra": ""
+    },
+    {
+        "Field": "tempo",
+        "Type": "varchar(20)",
+        "Null": "YES",
+        "Key": "",
+        "Default": null,
+        "Extra": ""
+    },
+    {
+        "Field": "status",
+        "Type": "varchar(20)",
+        "Null": "YES",
+        "Key": "",
+        "Default": null,
+        "Extra": ""
+    },
+    {
+        "Field": "marcado_por",
+        "Type": "int(11)",
+        "Null": "YES",
+        "Key": "",
+        "Default": null,
+        "Extra": ""
+    },
+    {
+        "Field": "criado_em",
+        "Type": "timestamp",
+        "Null": "NO",
+        "Key": "",
+        "Default": "curdate()",
+        "Extra": ""
+    }
+]

@@ -1,0 +1,10 @@
+{
+    "stats": {
+        "matriculas_pendentes": 0,
+        "pagamentos_validar": 0
+    },
+    "matriculas_count": 0,
+    "pagamentos_count": 4,
+    "comunicados_count": 2,
+    "estudantes_count": 8
+}
