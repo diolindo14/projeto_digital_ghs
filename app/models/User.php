@@ -266,4 +266,33 @@ class User {
         $stmt->execute();
         return $stmt->fetchAll();
     }
+
+    /**
+     * Atualiza o caminho da fotografia de perfil na tabela utilizadores.
+     * Usado por Admin, Secretaria e outros roles sem tabela própria.
+     *
+     * @param int    $userId ID do utilizador
+     * @param string|null $path Caminho relativo (ex: 'public/uploads/fotos_perfil/xxx.jpg') ou NULL para remover
+     * @return bool
+     */
+    public function updateFotoPerfil($userId, $path) {
+        $stmt = $this->db->prepare("UPDATE utilizadores SET foto_perfil = :foto WHERE id = :id");
+        $stmt->bindValue(':foto', $path);
+        $stmt->bindValue(':id', (int)$userId, PDO::PARAM_INT);
+        return $stmt->execute();
+    }
+
+    /**
+     * Retorna o caminho da fotografia de perfil do utilizador.
+     *
+     * @param int $userId
+     * @return string|null
+     */
+    public function getFotoPerfil($userId) {
+        $stmt = $this->db->prepare("SELECT foto_perfil FROM utilizadores WHERE id = :id");
+        $stmt->bindValue(':id', (int)$userId, PDO::PARAM_INT);
+        $stmt->execute();
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $row ? $row['foto_perfil'] : null;
+    }
 }

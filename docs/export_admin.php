@@ -1,17 +1,17 @@
 <?php
-// Resumo Executivo GHS v1.0
+// Resumo Executivo FMD v1.0 — Faculdade Moderna de Direito
 ?>
 <!DOCTYPE html>
 <html lang="pt-PT">
 
 <head>
     <meta charset="UTF-8">
-    <title>GHS — Resumo Executivo v1.0</title>
+    <title>FMD — Resumo Executivo v1.0</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #111827;
-            --accent: #2563eb;
+            --primary: #0b1120;
+            --accent: #1e3a8a;
             --accent-green: #059669;
             --light: #f9fafb;
             --border: #e2e8f0;
@@ -19,647 +19,229 @@
             --muted: #6b7280;
         }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; color: var(--text); background: #fff; padding: 40px 60px; line-height: 1.6; font-size: 13px; }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            color: var(--text);
-            background: #fff;
-            padding: 40px 60px;
-            line-height: 1.6;
-            font-size: 13px;
-        }
+        .cover { display: flex; align-items: flex-start; justify-content: space-between; border-bottom: 2px solid var(--border); padding-bottom: 25px; margin-bottom: 35px; }
+        .cover-left .logo { font-size: 16px; font-weight: 700; color: var(--primary); letter-spacing: 0.5px; }
+        .cover-left .logo span { color: var(--accent); }
+        .cover-left h1 { font-size: 26px; font-weight: 700; color: var(--primary); margin: 6px 0; }
+        .cover-left p { color: var(--muted); font-size: 13px; }
+        .cover-right { text-align: right; font-size: 12px; color: var(--muted); }
+        .cover-right .version { display: inline-block; background: var(--light); border: 1px solid var(--border); color: var(--primary); padding: 3px 10px; border-radius: 4px; font-size: 11px; font-weight: 600; margin-bottom: 6px; }
 
-        /* CAPA */
-        .cover {
-            display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
-            border-bottom: 2px solid var(--border);
-            padding-bottom: 25px;
-            margin-bottom: 35px;
-        }
+        h2 { font-size: 15px; font-weight: 700; color: var(--primary); margin: 30px 0 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+        h3 { font-size: 14px; font-weight: 600; color: var(--primary); margin: 18px 0 8px; }
+        h4 { font-size: 13px; font-weight: 600; color: var(--primary); margin: 12px 0 6px; }
+        p { margin-bottom: 10px; text-align: justify; }
+        ul, ol { padding-left: 20px; margin-bottom: 12px; }
+        li { margin-bottom: 5px; }
 
-        .cover-left .logo {
-            font-size: 16px;
-            font-weight: 700;
-            color: var(--primary);
-            letter-spacing: 0.5px;
-        }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0 25px; font-size: 12px; border: 1px solid var(--border); }
+        thead th { background: var(--light); color: var(--primary); padding: 10px 12px; text-align: left; font-weight: 600; border-bottom: 1px solid var(--border); }
+        tbody td { border-bottom: 1px solid var(--border); padding: 8px 12px; vertical-align: top; }
+        tbody tr:nth-child(even) td { background: #fafbfc; }
 
-        .cover-left .logo span {
-            color: var(--accent);
-        }
+        .badge { display: inline-flex; align-items: center; gap: 4px; padding: 2px 6px; border-radius: 4px; font-size: 10px; font-weight: 500; border: 1px solid transparent; }
+        .badge-green { background: #f0fdf4; color: #166534; border-color: #bbf7d0; }
+        .badge-blue { background: #eff6ff; color: #1e40af; border-color: #bfdbfe; }
+        .badge-yellow { background: #fefce8; color: #854d0e; border-color: #fef08a; }
+        .badge-red { background: #fef2f2; color: #991b1b; border-color: #fecaca; }
 
-        .cover-left h1 {
-            font-size: 26px;
-            font-weight: 700;
-            color: var(--primary);
-            margin: 6px 0;
-        }
+        .info-box { background: #eff6ff; border: 1px solid #bfdbfe; border-left: 3px solid var(--accent); border-radius: 4px; padding: 12px 16px; margin: 12px 0; }
+        .warning-box { background: #fefce8; border: 1px solid #fef08a; border-left: 3px solid #eab308; border-radius: 4px; padding: 12px 16px; margin: 12px 0; }
+        .success-box { background: #f0fdf4; border: 1px solid #bbf7d0; border-left: 3px solid var(--accent-green); border-radius: 4px; padding: 12px 16px; margin: 12px 0; }
 
-        .cover-left p {
-            color: var(--muted);
-            font-size: 13px;
-        }
-
-        .cover-right {
-            text-align: right;
-            font-size: 12px;
-            color: var(--muted);
-        }
-
-        .cover-right .version {
-            display: inline-block;
-            background: var(--light);
-            border: 1px solid var(--border);
-            color: var(--primary);
-            padding: 3px 10px;
-            border-radius: 4px;
-            font-size: 11px;
-            font-weight: 600;
-            margin-bottom: 6px;
-        }
-
-        h2 {
-            font-size: 15px;
-            font-weight: 700;
-            color: var(--primary);
-            margin: 30px 0 12px;
-            padding-bottom: 6px;
-            border-bottom: 1px solid var(--border);
-        }
-
-        h3 {
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--primary);
-            margin: 18px 0 8px;
-        }
-
-        h4 {
-            font-size: 13px;
-            font-weight: 600;
-            color: var(--primary);
-            margin: 12px 0 6px;
-        }
-
-        p {
-            margin-bottom: 10px;
-            text-align: justify;
-        }
-
-        ul,
-        ol {
-            padding-left: 20px;
-            margin-bottom: 12px;
-        }
-
-        li {
-            margin-bottom: 5px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 15px 0 25px;
-            font-size: 12px;
-            border: 1px solid var(--border);
-        }
-
-        thead th {
-            background: var(--light);
-            color: var(--primary);
-            padding: 10px 12px;
-            text-align: left;
-            font-weight: 600;
-            border-bottom: 1px solid var(--border);
-        }
-
-        tbody td {
-            border-bottom: 1px solid var(--border);
-            padding: 8px 12px;
-            vertical-align: top;
-        }
-
-        tbody tr:nth-child(even) td {
-            background: #fafbfc;
-        }
-
-        .badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-size: 10px;
-            font-weight: 500;
-            border: 1px solid transparent;
-        }
-
-        .badge-green {
-            background: #f0fdf4;
-            color: #166534;
-            border-color: #bbf7d0;
-        }
-
-        .badge-blue {
-            background: #eff6ff;
-            color: #1e40af;
-            border-color: #bfdbfe;
-        }
-
-        .badge-yellow {
-            background: #fefce8;
-            color: #854d0e;
-            border-color: #fef08a;
-        }
-
-        .badge-red {
-            background: #fef2f2;
-            color: #991b1b;
-            border-color: #fecaca;
-        }
-
-        .badge-orange {
-            background: #fff7ed;
-            color: #c2410c;
-            border-color: #ffedd5;
-        }
-
-        /* CONTAINERS */
-        .info-box {
-            background: #eff6ff;
-            border: 1px solid #bfdbfe;
-            border-left: 3px solid var(--accent);
-            border-radius: 4px;
-            padding: 12px 16px;
-            margin: 12px 0;
-        }
-
-        .warning-box {
-            background: #fefce8;
-            border: 1px solid #fef08a;
-            border-left: 3px solid #eab308;
-            border-radius: 4px;
-            padding: 12px 16px;
-            margin: 12px 0;
-        }
-
-        .success-box {
-            background: #f0fdf4;
-            border: 1px solid #bbf7d0;
-            border-left: 3px solid var(--accent-green);
-            border-radius: 4px;
-            padding: 12px 16px;
-            margin: 12px 0;
-        }
-
-        .danger-box {
-            background: #fef2f2;
-            border: 1px solid #fecaca;
-            border-left: 3px solid #ef4444;
-            border-radius: 4px;
-            padding: 12px 16px;
-            margin: 12px 0;
-        }
-
-        .info-box strong,
-        .warning-box strong,
-        .success-box strong,
-        .danger-box strong {
-            display: block;
-            margin-bottom: 4px;
-            color: var(--primary);
-        }
-
-        .steps {
-            counter-reset: step;
-            list-style: none;
-            padding: 0;
-        }
-
-        .steps li {
-            counter-increment: step;
-            display: flex;
-            gap: 12px;
-            align-items: flex-start;
-            margin-bottom: 12px;
-        }
-
-        .steps li::before {
-            content: counter(step);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 22px;
-            height: 22px;
-            min-width: 22px;
-            background: var(--light);
-            color: var(--primary);
-            border: 1px solid var(--border);
-            border-radius: 50%;
-            font-weight: 600;
-            font-size: 11px;
-            margin-top: 2px;
-        }
-
-        .steps li strong {
-            color: var(--primary);
-            display: block;
-        }
-
-        code {
-            font-family: 'JetBrains Mono', monospace;
-            background: var(--light);
-            padding: 2px 4px;
-            border-radius: 3px;
-            font-size: 11px;
-            color: #b91c1c;
-            border: 1px solid var(--border);
-        }
-
-        pre {
-            font-family: 'JetBrains Mono', monospace;
-            background: var(--light);
-            color: var(--primary);
-            padding: 12px;
-            border-radius: 4px;
-            font-size: 11px;
-            line-height: 1.4;
-            margin: 12px 0;
-            overflow-x: auto;
-            border: 1px solid var(--border);
-        }
-
-        pre .comment {
-            color: var(--muted);
-        }
-
-        pre .key {
-            color: var(--accent);
-        }
-
-        pre .val {
-            color: var(--accent-green);
-        }
-
-        .metrics {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 12px;
-            margin: 15px 0 25px;
-        }
-
-        .metric-card {
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            padding: 16px;
-            text-align: center;
-            background: var(--light);
-        }
-
-        .metric-card .number {
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--primary);
-        }
-
-        .metric-card .label {
-            font-size: 11px;
-            color: var(--muted);
-            margin-top: 4px;
-        }
-
-        .faq-item {
-            border: 1px solid var(--border);
-            border-radius: 4px;
-            margin-bottom: 8px;
-            overflow: hidden;
-        }
-
-        .faq-q {
-            background: var(--light);
-            padding: 10px 14px;
-            font-weight: 600;
-            color: var(--primary);
-            font-size: 12px;
-        }
-
-        .faq-a {
-            padding: 10px 14px;
-            font-size: 12px;
-            border-top: 1px solid var(--border);
-        }
-
-        .footer {
-            margin-top: 40px;
-            padding-top: 15px;
-            font-size: 11px;
-            color: var(--muted);
-            display: flex;
-            justify-content: space-between;
-            border-top: 1px solid var(--border);
-        }
+        .footer { margin-top: 40px; padding-top: 15px; font-size: 11px; color: var(--muted); display: flex; justify-content: space-between; border-top: 1px solid var(--border); }
 
         @media print {
-            @page {
-                margin: 0.5cm;
-            }
-
-            body {
-                padding: 30px 40px;
-            }
-
-            .cover-bar {
-                display: none;
-            }
-
-            .cover {
-                border-bottom: 2px solid #ccc;
-                padding-bottom: 15px;
-                margin-bottom: 20px;
-            }
-
-            table,
-            pre,
-            .info-box,
-            .warning-box,
-            .success-box,
-            .metric-card {
-                box-shadow: none;
-                border: 1px solid #ccc;
-            }
+            @page { margin: 0.5cm; }
+            body { padding: 30px 40px; }
+            table, pre, .info-box, .warning-box, .success-box { box-shadow: none; border: 1px solid #ccc; }
         }
     </style>
 </head>
 
 <body>
 
-
-
     <div class="cover">
         <div class="cover-left">
-            <img src="../img/logo.jpg" alt="GREEN HARD &amp; SOFTH"
-                style="height: 60px; border-radius: 6px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-            <h1>Resumo Executivo da Plataforma</h1>
-            <p>Documento de visão estratégica para Direção e Gestão Institucional</p>
+            <img src="../img/faculdade.png" alt="Faculdade Moderna de Direito" style="height: 60px; border-radius: 6px; margin-bottom: 20px;">
+            <h1>Resumo Executivo da Plataforma FMD</h1>
+            <p>Documento de Visão Estratégica, Governação Institucional e Arquitetura Académica</p>
         </div>
         <div class="cover-right">
-            <div class="version">v1.0</div><br>
-            <strong>Data:</strong> Março 2026<br>
-            <strong>Classificação:</strong> Uso Interno<br>
-            <strong>Autor:</strong> Diosives Crobute
+            <div class="version">v1.0 FMD</div><br>
+            <strong>Data:</strong> Agosto 2026<br>
+            <strong>Classificação:</strong> Uso Interno Institucional<br>
+            <strong>Instituição:</strong> Faculdade Moderna de Direito (FMD)
         </div>
     </div>
 
+    <h2>1. Apresentação e Contexto Institucional</h2>
+    <p>A <strong>Faculdade Moderna de Direito (FMD)</strong> é uma nova instituição universitária privada focada na área jurídica na Guiné-Bissau. Lançada no final de 2024, a sua criação partiu da iniciativa de jovens licenciados formados pela Faculdade de Direito de Bissau (pública) que decidiram criar uma alternativa de ensino de excelência na capital.</p>
+    <p>O presente sistema resulta da migração e adaptação tecnológica institucional da plataforma originalmente concebida para a Escola Superior de Informática – Green Hard & Soft (GHS), devidamente transformada para responder ao modelo pedagógico, normativo e operacional do curso de <strong>Licenciatura em Direito</strong> da FMD.</p>
 
-
-
-    <h2>1. Visão Geral do Projeto</h2>
-    <p>O <strong>GHS (Green Hard &amp; Softh)</strong> é uma plataforma de gestão académica e financeira
-        desenvolvida em
-        PHP nativo, concebida para eliminar processos manuais e papéis nas escolas superiores de informática. O
-        ecossistema serve quatro perfis de utilizadores com portais independentes, garante a rastreabilidade de
-        todas as
-        operações e implementa padrões de segurança de nível empresarial.</p>
-    <p>Na versão 1.0, foram consolidados o motor de regras pedagógicas, o sistema de inteligência visual
-        (Dashboards) e
-        as camadas de proteção de dados, resultando num produto robusto e pronto para escala institucional.</p>
-
-    <h2>2. Problema e Solução</h2>
+    <h2>2. Problema e Solução Tecnológica</h2>
     <table>
         <thead>
             <tr>
-                <th width="42%">Problema Anterior</th>
-                <th width="58%">Solução Implementada na Plataforma GHS</th>
+                <th width="40%">Desafio de Gestão Académica</th>
+                <th width="60%">Solução Integrada na Plataforma FMD</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>Matrículas presenciais com perda de documentos</td>
-                <td>Portal de candidatura 100% digital com upload de B.I., Certificados e Comprovativos, validados
-                    via
-                    <strong>Integrador Visual Documental (PDF.js)</strong>.
-                </td>
+                <td>Matrículas presenciais e burocracia documental</td>
+                <td>Submissão digital de candidaturas com triagem automatizada, validação documental e controlo estrito do prazo regulamentar de <strong>48 horas</strong>.</td>
             </tr>
             <tr>
-                <td>Cálculo manual de médias e progressão de ano</td>
-                <td><strong>Motor Académico Autónomo</strong>: determina automaticamente Aprovação (≥12), Recurso
-                    (8-11)
-                    ou Repetição de Ano (&lt;8 ou mais de 3 negativas).</td>
+                <td>Cálculo de Avaliação Contínua e Exames</td>
+                <td><strong>Motor de Avaliação Centralizado</strong>: calcula automaticamente as 4 componentes de AC (Teoria Geral, Casos Práticos, Peças Processuais, Simulações) e Exame Final, aplicando a nota de corte oficial (Aprovado ≥12, Recurso 8–11.9, Reprovado <8).</td>
             </tr>
             <tr>
-                <td>Horários estáticos distribuídos em papel</td>
-                <td>Grade horária interativa e dinâmica por turma, visível no portal do aluno e do professor, com
-                    dados
-                    em tempo real.</td>
+                <td>Conflitos e Contestações de Notas</td>
+                <td><strong>Sistema de Mediação Académica de 8 Etapas</strong>: garante transparência total no tratamento de contestações dos estudantes com mediação pedagógica da Direção.</td>
             </tr>
             <tr>
-                <td>Pagamentos sem rastreabilidade ou auditoria</td>
-                <td>Sistema de Tesouraria com validação de comprovativos e <strong>Registo Manual de
-                        Pagamentos</strong>
-                    presenciais.</td>
-            </tr>
-            <tr>
-                <td>Falta de análise visual dos dados da escola</td>
-                <td><strong>Dashboards Estatísticos</strong> com gráficos de crescimento de alunos por ano e
-                    distribuição por turno (ECharts).</td>
-            </tr>
-            <tr>
-                <td>Professores sem ferramentas pedagógicas digitais</td>
-                <td>Portal docente com lançamento de notas, registo de sumários digitais, marcação de faltas e
-                    resposta
-                    a reclamações de alunos.</td>
-            </tr>
-            <tr>
-                <td>Comunicação escolar descentralizada e ineficaz</td>
-                <td>Sistema de Comunicados com <strong>Read Tracking</strong> (registo de leitura por utilizador) e
-                    expiração automática de avisos.</td>
+                <td>Comunicação e Transparência Pedagógica</td>
+                <td>Central de Comunicados com confirmação de leitura (Read Tracking), convocatórias diretas para reuniões e alertas em tempo real nos portais.</td>
             </tr>
         </tbody>
     </table>
 
-    <h2>3. Portais e Utilizadores</h2>
+    <h2>3. Perfis e Papéis de Utilizadores (RBAC)</h2>
     <table>
         <thead>
             <tr>
-                <th>Portal</th>
-                <th>Utilizador</th>
-                <th>Principais Responsabilidades</th>
+                <th>Perfil</th>
+                <th>Acesso</th>
+                <th>Principais Funcionalidades</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td><strong>⚙️ Administração</strong></td>
-                <td>Diretor / Gestor</td>
-                <td>Configuração global do sistema, auditoria de logs, gestão de utilizadores, análise de dashboards
-                    estatísticos.</td>
+                <td>Direção da FMD</td>
+                <td>Gestão de cursos, anos curriculares, semestres, turmas, disciplinas, professores, auditoria de logs e relatórios estratégicos.</td>
             </tr>
             <tr>
-                <td><strong>🏢 Secretaria/Tesouraria</strong></td>
-                <td>Administrativos</td>
-                <td>Validação de matrículas e documentos, aprovação/rejeição de pagamentos, emissão de recibos
-                    digitais,
-                    gestão de comunicados.</td>
+                <td><strong>🏢 Secretaria / Tesouraria</strong></td>
+                <td>Corpo Administrativo</td>
+                <td>Validação de matrículas, controlo de prazos (48h), emissão de recibos, certidões e gestão financeira.</td>
             </tr>
             <tr>
-                <td><strong>👨‍🏫 Professor</strong></td>
-                <td>Docentes</td>
-                <td>Lançamento de pautas e notas, registo de sumários e faltas, resposta a reclamações de alunos,
-                    consulta de horários.</td>
+                <td><strong>👨‍⚖️ Professor</strong></td>
+                <td>Corpo Docente</td>
+                <td>Lançamento das 4 ACs e Exame, registo de sumários digitais, controlo de assiduidade e resposta a esclarecimentos pedagógicos.</td>
             </tr>
             <tr>
                 <td><strong>🎓 Estudante</strong></td>
-                <td>Alunos</td>
-                <td>Submissão de matrícula, consulta de notas, horários e histórico global, pagamento de propinas,
-                    leitura de comunicados.</td>
+                <td>Alunos Matriculados</td>
+                <td>Consulta de pautas dinâmicas, submissão de matrículas, acompanhamento da situação financeira, pedidos de mediação e certificados de mérito.</td>
             </tr>
         </tbody>
     </table>
 
-    <h2>4. Novas Funcionalidades da Versão 1.0</h2>
+    <h2>4. Estrutura Académica e Motor de Avaliação da FMD</h2>
 
-    <h3>4.1 Dashboards de Inteligência Operacional</h3>
-    <p>O painel Administrativo foi equipado com visualizações gráficas em tempo real utilizando a biblioteca
-        <strong>ECharts</strong>. As métricas disponíveis incluem:
-    </p>
+    <h3>4.1 Organização Curricular</h3>
+    <p>A estrutura pedagógica principal assenta na <strong>Licenciatura em Direito</strong>, organizada em <strong>4 Anos Curriculares (8 Semestres)</strong>. As disciplinas e turmas são totalmente configuráveis via painel administrativo, mantendo flexibilidade para atualizações de plano curricular sem alteração do código-fonte.</p>
+
+    <h3>4.2 Componentes de Avaliação Contínua (AC1 a AC4)</h3>
+    <p>O motor de avaliação foi adaptado ao rigor do ensino jurídico:</p>
     <ul>
-        <li><strong>Densidade Estudantil por Ano Letivo</strong>: evolução do número de matriculados ao longo dos
-            anos.
-        </li>
-        <li><strong>Distribuição por Turno</strong>: análise da ocupação de salas e docentes por turno (Manhã,
-            Tarde,
-            Noite).</li>
-        <li><strong>Alerta de Propinas</strong>: monitorização em tempo real de propinas em atraso.</li>
+        <li><strong>AC1 — Frequência / Teste Escrito de Teoria Geral</strong> (0 a 5 valores)</li>
+        <li><strong>AC2 — Resolução de Casos Práticos</strong> (0 a 5 valores)</li>
+        <li><strong>AC3 — Redação de Peça Processual / Pesquisa Jurídica</strong> (0 a 5 valores)</li>
+        <li><strong>AC4 — Participação nas Aulas / Simulações de Julgamento</strong> (0 a 5 valores)</li>
     </ul>
 
-    <h3>4.2 Motor de Progressão Académica Automática</h3>
-    <p>Implementado no modelo <strong>Matricula.php</strong> e validado pelo motor <strong>Academico.php</strong>, o
-        sistema aplica as seguintes regras pedagógicas sem intervenção manual:</p>
+    <div class="info-box">
+        <strong>Fórmula da Nota Final:</strong><br>
+        <code>AC_total = AC1 + AC2 + AC3 + AC4</code> (Máximo: 20 valores)<br>
+        <code>Nota Final = (AC_total + Exame Final) / 2</code> (Escala 0 a 20 valores)
+    </div>
+
+    <h3>4.3 Matriz de Resultados Académicos</h3>
     <table>
         <thead>
             <tr>
-                <th>Cenário</th>
-                <th>Condição</th>
-                <th>Resultado Automático</th>
+                <th>Resultado</th>
+                <th>Intervalo de Nota Final</th>
+                <th>Estado Regulamentar</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>Aprovação por Trânsito</td>
-                <td>Média final ≥ 12 em todas as disciplinas</td>
-                <td><span class="badge badge-green">Aprovado ✓</span></td>
+                <td><span class="badge badge-green">APROVADO</span></td>
+                <td>Nota Final ≥ 12,0 valores</td>
+                <td>Aprovação direta na disciplina.</td>
             </tr>
             <tr>
-                <td>Acesso a Exame de Recurso</td>
-                <td>Média entre 8 e 11 (máx. 3 disciplinas)</td>
-                <td><span class="badge badge-yellow">Recurso ⚠</span></td>
+                <td><span class="badge badge-yellow">RECURSO</span></td>
+                <td>8,0 ≤ Nota Final < 12,0 valores</td>
+                <td>Admitido ao Exame de Recurso (máx. 3 disciplinas).</td>
             </tr>
             <tr>
-                <td>Repetição de Ano</td>
-                <td>Nota &lt; 8 em qualquer disciplina OU mais de 3 negativas acumuladas</td>
-                <td><span class="badge badge-red">Reprovado ✗</span></td>
+                <td><span class="badge badge-red">REPROVADO</span></td>
+                <td>Nota Final < 8,0 valores</td>
+                <td>Reprovação direta na disciplina.</td>
             </tr>
         </tbody>
     </table>
 
-    <h3>4.3 Gestão de Tesouraria e Pagamento Manual</h3>
-    <p>Além da submissão e validação digital de comprovativos, a secretaria pode agora registar pagamentos em
-        pessoa:
-        depósitos bancários diretos são lançados manualmente pelo administrativo, activando imediatamente o status
-        académico do aluno e gerando um recibo digital com número de série único.</p>
+    <h2>5. Regulamento de Matrícula (Prazo 48 Horas)</h2>
+    <p>Após a aprovação do registo inicial de candidatura pela Secretaria, o estudante dispõe de <strong>48 horas regulamentares</strong> (definidas centralmente pela constante <code>MATRICULA_PRAZO_HORAS</code>) para submeter a documentação definitiva e comprovativo de pagamento. Decorrido o prazo sem submissão, a candidatura expira automaticamente.</p>
 
-    <h3>4.4 Histórico Académico Global</h3>
-    <p>Cada aluno tem acesso ao seu <strong>Histórico Global</strong>, um registo imutável e vitalício de todas as
-        disciplinas concluídas, com médias, semestres e anos letivos. Este registo serve como base para a emissão de
-        certidões e é gerido pelo modelo <strong>Academico.php > getGlobalHistory()</strong>.</p>
+    <h2>6. Sistema de Mediação Académica (8 Etapas)</h2>
+    <p>Preservado integralmente do sistema base, o fluxo de mediação garante o direito de contestação instruído em 8 passos:</p>
+    <ol>
+        <li>Abertura fundamentada da contestação pelo estudante.</li>
+        <li>Notificação e resposta formal do docente.</li>
+        <li>Contra-argumentação (única) do estudante.</li>
+        <li>Identificação de impasse pedagógico.</li>
+        <li>Escalação do processo à Administração/Direção.</li>
+        <li>Emissão de Convocatória oficial com alerta nos portais.</li>
+        <li>Reunião de mediação pedagógica.</li>
+        <li>Decisão final vinculativa registada em ata.</li>
+    </ol>
 
-    <h3>4.5 Sistema de Mérito Académico</h3>
-    <p>A plataforma emite automaticamente <strong>Certificados de Mérito</strong> para os melhores alunos por
-        semestre e
-        por nível. Os rankings são calculados pela média aritmética de todas as disciplinas com exame lançado, e os
-        certificados ficam visíveis no portal do aluno.</p>
-
-    <h3>4.6 Fluxo de Inscrição Simplificado para Estudantes Internos</h3>
-    <p>O portal público de candidatura foi atualizado com lógica inteligente que distingue automaticamente entre
-        <strong>novos candidatos</strong> e <strong>estudantes internos</strong> (alunos já registados na plataforma).
-        Quando um aluno interno acede ao formulário de candidatura, o sistema:</p>
+    <h2>7. Segurança e Proteção de Dados</h2>
     <ul>
-        <li><strong>Oculta campos redundantes</strong>: Escola de Proveniência, Ano de Conclusão, Média Final, Motivação e Certificado de Habilitações são automaticamente escondidos, pois estes dados já existem no sistema.</li>
-        <li><strong>Pré-preenche os dados pessoais</strong>: Nome, B.I., Email, Telefone, Morada e dados do encarregado são preenchidos automaticamente a partir do perfil existente.</li>
-        <li><strong>Reutiliza a conta existente</strong>: O backend identifica o utilizador já autenticado e associa a nova candidatura à conta existente, sem criar duplicados nem gerar novas credenciais.</li>
-        <li><strong>Página de confirmação adaptada</strong>: Após a submissão, a página de sucesso não exibe credenciais (que o aluno já possui), apresentando apenas a confirmação da submissão e os próximos passos.</li>
-    </ul>
-    <div class="success-box">
-        <strong>✅ Benefício Institucional:</strong> Este fluxo reduz o tempo de inscrição para estudantes em renovação de ano ou inscrição num novo curso, eliminando burocracia repetitiva e o risco de dados duplicados ou inconsistentes na base de dados.
-    </div>
-
-
-    <p>A plataforma implementa proteção multicamada, garantindo conformidade com as melhores práticas internacionais
-        de
-        segurança de dados:</p>
-    <ul>
-        <li><strong>CSRF</strong>: Token criptográfico único por sessão em todos os formulários e chamadas AJAX.
-        </li>
-        <li><strong>XSS</strong>: Sanitização sistemática de todos os inputs e outputs dinâmicos.</li>
-        <li><strong>SQLi</strong>: PDO Prepared Statements em 100% das consultas à base de dados.</li>
-        <li><strong>IDOR</strong>: Verificação de propriedade antes de servir qualquer ficheiro ou URL sensível.
-        </li>
-        <li><strong>Auditoria</strong>: Todas as ações críticas são registadas com ID do utilizador, IP e timestamp.
-        </li>
+        <li><strong>CSRF:</strong> Tokens criptográficos únicos por sessão (<code>fmd_csrf_token</code>).</li>
+        <li><strong>XSS:</strong> Sanitização e escaping dinâmico em todas as visualizações.</li>
+        <li><strong>SQL Injection:</strong> Prepared Statements PDO em 100% das consultas à base de dados.</li>
+        <li><strong>RBAC & IDOR:</strong> Verificação rigorosa de autorização nos controllers antes de servir recursos.</li>
+        <li><strong>Auditoria:</strong> Registo imutável de ações críticas (logins, aprovações, notas, mediações).</li>
     </ul>
 
-    <div class="alert-box">
-        <strong>🔒 Nota de Segurança Institucional:</strong> As credenciais de Administrador não devem ser
-        partilhadas.
-        Todas as ações efetuadas sob a conta administrativa ficam registadas num log inviolável, servindo como prova
-        legal em caso de auditoria.
-    </div>
-
-    <h2>6. Ficha Técnica</h2>
+    <h2>8. Ficha Técnica do Sistema FMD</h2>
     <table>
         <tbody>
             <tr>
-                <td width="30%"><strong>Plataforma</strong></td>
-                <td>PHP 8.2 Nativo — Padrão MVC sem frameworks</td>
+                <td width="30%"><strong>Denominação</strong></td>
+                <td>Plataforma Académica da Faculdade Moderna de Direito (FMD)</td>
             </tr>
             <tr>
-                <td><strong>Servidor</strong></td>
-                <td>Apache 2.4+ com mod_rewrite (XAMPP compatível)</td>
+                <td><strong>Arquitetura Tecnológica</strong></td>
+                <td>PHP 8.x Nativo (Padrão MVC), MySQL/MariaDB PDO, Bootstrap 5, ECharts</td>
             </tr>
             <tr>
-                <td><strong>Base de Dados</strong></td>
-                <td>MariaDB 10.4+ / MySQL 8.0 via PDO</td>
+                <td><strong>Versão da Migração</strong></td>
+                <td>v1.0 — FMD (Agosto 2026)</td>
             </tr>
             <tr>
-                <td><strong>Interface</strong></td>
-                <td>Bootstrap 5, ECharts, PDF.js, FontAwesome</td>
-            </tr>
-            <tr>
-                <td><strong>Segurança</strong></td>
-                <td>CSRF Tokens, XSS Sanitization, IDOR Guards, finfo Upload Validation</td>
-            </tr>
-            <tr>
-                <td><strong>Desenvolvedor</strong></td>
-                <td>Diosives Crobute / Waro Campotcho</td>
-            </tr>
-            <tr>
-                <td><strong>Versão Atual</strong></td>
-                <td>1.0 — Março 2026</td>
+                <td><strong>Estado de Conservação</strong></td>
+                <td>100% das regras válidas preservadas, rebranding completo efetuado.</td>
             </tr>
         </tbody>
     </table>
 
     <div class="footer">
-        <span>&copy; 2026 Green Hard &amp; Softh — Escola Superior de Informática. Documento de Uso Interno.</span>
-        <span>Resumo Executivo v1.0</span>
+        <span>&copy; 2026 Faculdade Moderna de Direito (FMD). Documento Institucional Interno.</span>
+        <span>Resumo Executivo v1.0 — FMD</span>
     </div>
 
 </body>
-
 </html>

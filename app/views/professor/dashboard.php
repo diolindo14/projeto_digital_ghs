@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Área Docente - GHS</title>
+    <title>Área Docente — FMD</title>
     <!-- CSS Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font -->
@@ -98,9 +98,9 @@
         <div>
             <div class="text-center mb-4 mt-2">
                 <div style="width: 80px; height: 80px; border-radius: 50%; border: 2px solid #10B981; display:flex; align-items:center; justify-content:center; background:white; margin: 0 auto; overflow:hidden;">
-                    <img src="<?= URL_ROOT ?>/img/logo.jpg" alt="Logo GHS" style="width: 100%; height: 100%; object-fit: cover;">
+                    <img src="<?= URL_ROOT ?>/img/logo_fmd.jpg" alt="Faculdade Moderna de Direito" style="width: 100%; height: 100%; object-fit: contain;">
                 </div>
-                <h5 class="fw-bold mt-2 text-white">Portal GHS</h5>
+                <h5 class="fw-bold mt-2 text-white">Portal FMD</h5>
                 <span class="badge bg-secondary mb-3">Docente</span>
             </div>
             
@@ -1244,7 +1244,7 @@ function printSection(paneId) {
     const nivelLabel = $('#print-nivel-label').text() || 'ANO';
     const officialHeader = `
         <div class="text-center mb-4" style="font-size: 1.3rem; font-weight: 800; font-family: 'Outfit', sans-serif; border-bottom: 3px solid #1a1a1a; padding-bottom: 15px; margin-bottom: 25px; color: #1a1a1a; text-transform: uppercase;">
-            (Grupo: GHS-${turmaLabel} | HORARIO | Nivel: ${nivelLabel})
+            (Turma: ${turmaLabel} | HORÁRIO | Nível: ${nivelLabel})
         </div>
     `;
 

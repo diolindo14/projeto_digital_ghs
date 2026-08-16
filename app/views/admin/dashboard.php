@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-PT">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Painel da Direção - GHS</title>
+    <title>Painel da Direção — FMD</title>
     <!-- CSS Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -46,7 +46,7 @@
             width: 64px;
             height: 64px;
             border-radius: 50%;
-            border: 2px solid #10B981;
+            border: 2px solid #1e3a8a;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -116,15 +116,15 @@
         }
 
         .sidebar .nav-link:hover {
-            background: rgba(16, 185, 129, .08);
-            color: #10B981;
-            border-left-color: rgba(16, 185, 129, .4);
+            background: rgba(30, 58, 138, .1);
+            color: #2563eb;
+            border-left-color: rgba(30, 58, 138, .5);
         }
 
         .sidebar .nav-link.active {
-            background: rgba(16, 185, 129, .15);
-            color: #10B981;
-            border-left-color: #10B981;
+            background: rgba(30, 58, 138, .2);
+            color: #3b82f6;
+            border-left-color: #3b82f6;
             font-weight: 600;
         }
 
@@ -182,14 +182,14 @@
             <!-- Brand / Logo -->
             <div class="sidebar-brand">
                 <div class="logo-wrap">
-                    <img src="<?= URL_ROOT ?>/img/logo.jpg" alt="Logo GHS">
+                    <img src="<?= URL_ROOT ?>/img/logo_fmd.jpg" alt="Faculdade Moderna de Direito" style="width: 100%; height: 100%; object-fit: contain;">
                 </div>
-                <h5 class="text-white mb-1">Portal GHS</h5>
+                <h5 class="text-white mb-1">Portal FMD</h5>
                 <span class="badge mb-1"
                     style="background:rgba(220,38,38,.25); color:#f87171; font-size:.65rem; letter-spacing:.06em;">DIREÇÃO
                     &amp; ADMIN</span>
                 <div class="mt-2 d-flex align-items-center justify-content-center gap-2">
-                    <ion-icon name="person-circle-outline" style="color:#10B981; font-size:1rem;"></ion-icon>
+                    <ion-icon name="person-circle-outline" style="color:#2563eb; font-size:1rem;"></ion-icon>
                     <span class="text-white-50"
                         style="font-size:.75rem;"><?= htmlspecialchars($_SESSION['user_name'] ?? 'Admin') ?></span>
                 </div>
@@ -253,10 +253,6 @@
                             <span class="badge bg-primary ms-auto" style="font-size: 0.65rem; padding: 0.35em 0.65em;"><?= count($pendingFin) ?></span>
                         <?php endif; ?>
                     </a>
-                    <a class="nav-link" id="tab-merito" data-bs-toggle="pill" data-bs-target="#pane-merito"
-                        href="javascript:void(0)" role="tab">
-                        <ion-icon name="trophy-outline"></ion-icon> Gestão de Mérito
-                    </a>
 
                     <div class="sidebar-section-label mt-3">Ações Institucionais</div>
                     <a class="nav-link" id="tab-notificacoes" data-bs-toggle="pill" data-bs-target="#pane-notificacoes"
@@ -295,7 +291,7 @@
             <div class="d-flex justify-content-between align-items-center mb-4 pb-2 border-bottom">
                 <div>
                     <h2 class="fw-bold text-dark">Painel Administrativo da Direção</h2>
-                    <p class="text-muted mb-0">Controlo Total - Green Hard & Softh</p>
+                    <p class="text-muted mb-0">Controlo Total — Faculdade Moderna de Direito</p>
                 </div>
                 <div class="d-flex align-items-center gap-3">
                     <div class="d-flex align-items-center gap-2 border px-3 py-2 rounded-pill bg-white shadow-sm">
@@ -527,7 +523,7 @@
                         </div>
                         <div class="d-flex gap-2">
                             <button class="btn btn-primary shadow-sm fw-bold border-0"
-                                style="background: linear-gradient(135deg, #10B981, #059669);" data-bs-toggle="modal"
+                                style="background: linear-gradient(135deg, #1e3a8a, #1e40af);" data-bs-toggle="modal"
                                 onclick="clearEventoForm()" data-bs-target="#eventoModal">
                                 <ion-icon name="add-circle-outline"></ion-icon> Novo Evento
                             </button>
@@ -691,7 +687,7 @@
                         </div>
                     </div>
 
-                    <!-- ── SECÇÃO DE NOTIFICAÇÕES DE SISTEMA (GHS Workflow) ── -->
+                    <!-- ── SECÇÃO DE NOTIFICAÇÕES DE SISTEMA (FMD Workflow) ── -->
                     <div class="row g-4 mb-4">
                         <div class="col-12">
                             <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
@@ -1311,11 +1307,7 @@
                                                 data-bs-target="#pills-disciplinas" type="button">Disciplinas
                                                 (Curriculo)</button>
                                         </li>
-                                        <li class="nav-item" role="presentation">
-                                            <button class="nav-link" data-bs-toggle="pill"
-                                                data-bs-target="#pills-especialidades" type="button">Especialidades (5º
-                                                Ano)</button>
-                                        </li>
+
                                         <li class="nav-item" role="presentation">
                                             <button class="nav-link" data-bs-toggle="pill"
                                                 data-bs-target="#pills-professores" type="button">Professores</button>
@@ -1411,49 +1403,7 @@
                                                     <?php endforeach; ?>
                                                 </tbody>
                                             </table>
-                                        </div>
-                                        <!-- Aba Especialidades -->
-                                        <div class="tab-pane fade" id="pills-especialidades">
-                                            <div class="d-flex justify-content-between mb-3">
-                                                <h5>Áreas de Especialização</h5><button class="btn btn-sm btn-dark"
-                                                    data-bs-toggle="modal" data-bs-target="#especialidadeModal"
-                                                    onclick="clearEspForm()">+ Nova Especialidade</button>
-                                            </div>
-                                            <table class="table table-sm bg-white shadow-sm rounded">
-                                                <thead>
-                                                    <tr>
-                                                        <th>Cód</th>
-                                                        <th>Nome</th>
-                                                        <th>Vagas</th>
-                                                        <th class="text-end">Ações</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <?php foreach ($data['especialidades'] as $es): ?>
-                                                        <tr>
-                                                            <td class="text-muted"><?= htmlspecialchars($es['codigo']) ?>
-                                                            </td>
-                                                            <td class="fw-bold text-primary">
-                                                                <?= htmlspecialchars($es['nome']) ?></td>
-                                                            <td><?= $es['vagas'] ?></td>
-                                                            <td class="text-end">
-                                                                <button class="btn btn-sm btn-outline-primary btn-edit-esp"
-                                                                    data-id="<?= $es['id'] ?>"
-                                                                    data-codigo="<?= htmlspecialchars($es['codigo']) ?>"
-                                                                    data-nome="<?= htmlspecialchars($es['nome']) ?>"
-                                                                    data-desc="<?= htmlspecialchars($es['descricao']) ?>"
-                                                                    data-vagas="<?= $es['vagas'] ?>"
-                                                                    data-ativa="<?= $es['ativa'] ?>"><ion-icon
-                                                                        name="create-outline"></ion-icon></button>
-                                                                <button class="btn btn-sm btn-outline-danger"
-                                                                    onclick="confirmDeleteEsp(<?= $es['id'] ?>)"><ion-icon
-                                                                        name="trash-outline"></ion-icon></button>
-                                                            </td>
-                                                        </tr>
-                                                    <?php endforeach; ?>
-                                                </tbody>
-                                            </table>
-                                        </div>
+
                                         <!-- Aba Professores -->
                                         <div class="tab-pane fade" id="pills-professores">
                                             <div class="d-flex justify-content-between mb-3">
@@ -2289,38 +2239,7 @@
 
     <!-- === SECCAO DE MODAIS CONSOLIDADA (PARTE 2) === -->
 
-    <!-- Modal Especialidade -->
-    <div class="modal fade" id="especialidadeModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog">
-            <form action="<?= URL_ROOT ?>/admin/saveEspecialidade" method="POST"
-                class="modal-content border-0 shadow-lg">
-                <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token'] ?>">
-                <input type="hidden" name="id" id="esp_id">
-                <div class="modal-header bg-primary text-white">
-                    <h5 class="modal-title fw-bold" id="espModalTitle">Nova Especialidade</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body p-4">
-                    <div class="mb-3">
-                        <label class="form-label small fw-bold">Código</label>
-                        <input type="text" name="codigo" id="esp_codigo" class="form-control" required>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label small fw-bold">Nome da Especialidade</label>
-                        <input type="text" name="nome" id="esp_nome" class="form-control" required>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label small fw-bold">Vagas Totais</label>
-                        <input type="number" name="vagas" id="esp_vagas" class="form-control" value="30">
-                    </div>
-                </div>
-                <div class="modal-footer bg-light border-0">
-                    <button type="button" class="btn btn-secondary" data-bs-modal="dismiss">Cancelar</button>
-                    <button type="submit" class="btn btn-primary fw-bold">Salvar Especialidade</button>
-                </div>
-            </form>
-        </div>
-    </div>
+
 
     <!-- Modal Rejeitar Matrícula -->
     <div class="modal fade" id="rejectModal" tabindex="-1" aria-hidden="true">
@@ -2716,7 +2635,7 @@
                             <label class="form-label fw-bold small text-muted text-uppercase">Email
                                 Institucional</label>
                             <input type="email" name="email" id="student_email" class="form-control" required
-                                placeholder="aluno@green.gw">
+                                placeholder="aluno@fmd.edu">
                         </div>
                         <div class="col-md-6">
                             <label class="form-label fw-bold small text-muted text-uppercase">Palavra-passe (Opcional p/
@@ -3820,17 +3739,7 @@ $(document).ready(function () {
         new bootstrap.Modal(document.getElementById('disciplinaModal')).show();
     });
 
-    $(document).on('click', '.btn-edit-esp', function () {
-        const d = $(this).data();
-        $('#esp_id').val(d.id);
-        $('#esp_codigo').val(d.codigo);
-        $('#esp_nome').val(d.nome);
-        $('#esp_descricao').val(d.desc);
-        $('#esp_vagas').val(d.vagas);
-        $('#esp_ativa').prop('checked', d.ativa == 1);
-        $('#espModalTitle').text('Editar Especialidade');
-        new bootstrap.Modal(document.getElementById('especialidadeModal')).show();
-    });
+
 
     // ── Estudantes (Edição e Visualização) ────────────────
     $(document).on('click', '.btn-edit-student', function (e) {
@@ -3949,13 +3858,18 @@ window.viewStudent = function(id) {
 };
 
     // ── Botão flutuante scroll-to-top ─────────────────────
-    const topBtn = $('<button id="scrollTop" class="btn" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;background:#10B981;color:#fff;display:none;z-index:9999;box-shadow:0 4px 12px rgba(0,0,0,.2);"><i>↑</i></button>');
+    const topBtn = $('<button id="scrollTop" class="btn" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;background:#1e3a8a;color:#fff;display:none;z-index:9999;box-shadow:0 4px 12px rgba(0,0,0,.2);"><i>↑</i></button>');
     topBtn.appendTo('body');
     $(window).on('scroll', () => {
         if ($(this).scrollTop() > 300) topBtn.fadeIn(); else topBtn.fadeOut();
     });
     topBtn.on('click', () => $('html,body').animate({ scrollTop: 0 }, 400));
-
+    
+    // Auto-scroll ao topo ao clicar nos separadores do menu lateral
+    $('.sidebar .nav-link, a[data-bs-toggle="pill"]').on('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        $('html, body').animate({ scrollTop: 0 }, 200);
+    });
 });
 
 function convocarComMotivo(eid, did) {
@@ -4106,7 +4020,7 @@ function convocarComMotivo(eid, did) {
                 </div>
                 <div class="alert alert-warning border-0 rounded-3 small mt-3">
                     <ion-icon name="key-outline" class="me-1"></ion-icon>
-                    A senha provisória gerada será: <strong>ghs + últimos 4 dígitos do BI</strong>. Comunique ao aluno.
+                    A senha provisória gerada será: <strong>fmd + últimos 4 dígitos do BI</strong>. Comunique ao aluno.
                 </div>
             </div>
             <div class="modal-footer border-0 pb-4">

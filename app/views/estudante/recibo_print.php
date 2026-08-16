@@ -2,7 +2,7 @@
 <html lang="pt-PT">
 <head>
     <meta charset="UTF-8">
-    <title>Recibo de Pagamento - GHS</title>
+    <title>Recibo de Pagamento — FMD</title>
     <style>
         @page { size: 14.8cm 10.5cm; margin: 4mm; }
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f8fafc; color: #1e293b; margin: 0; padding: 20px; box-sizing: border-box; display: flex; justify-content: center; }
@@ -44,8 +44,8 @@
         <div class="receipt-box">
             <div class="header">
                 <div class="logo-container">
-                    <img src="<?= URL_ROOT ?>/img/logo.jpg" alt="Logo Escola" class="logo-img">
-                    <div class="school-name">Green Hard & Softh</div>
+                    <img src="<?= URL_ROOT ?>/img/logo_fmd.jpg" alt="Faculdade Moderna de Direito" class="logo-img">
+                    <div class="school-name">Faculdade Moderna de Direito</div>
                 </div>
                 <div style="text-align: right; display: flex; flex-direction: column; justify-content: center;">
                     <h1 style="margin:0; font-size: 16px; color: #0f172a;">RECIBO</h1>
@@ -63,7 +63,7 @@
                     <div style="text-align: right;">
                         <p style="color: #64748b; font-size: 8px; text-transform: uppercase; font-weight: 700; margin-bottom: 2px;">DETALHES DA EMISSÃO</p>
                         <p><strong>Emitido em:</strong> <?= date('d/m/Y H:i') ?></p>
-                        <p><strong>Operador:</strong> Sistema Digital GHS</p>
+                        <p><strong>Operador:</strong> Sistema Digital FMD</p>
                     </div>
                 </div>
                 
@@ -112,7 +112,7 @@
 
             <div class="footer">
                 <p style="margin-bottom: 2px;">Este documento foi gerado eletronicamente e é válido sem assinatura manuscrita.</p>
-                <p style="font-weight: 700;">&copy; <?= date('Y') ?> Green Hard & Softh - O futuro é Hoje</p>
+                <p style="font-weight: 700;">&copy; <?= date('Y') ?> Faculdade Moderna de Direito — FMD</p>
             </div>
         </div>
     </div>

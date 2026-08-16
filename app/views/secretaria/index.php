@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal da Secretaria - Green</title>
+    <title>Portal da Secretaria — FMD</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -15,7 +15,7 @@
         body { font-family: 'Outfit', sans-serif; background-color: #f8fafc; }
         .sidebar { background: #0f172a; min-height: 100vh; color: white; padding: 20px; position: fixed; width: 260px; }
         .sidebar a { color: #cbd5e1; text-decoration: none; display: flex; align-items: center; padding: 12px 15px; border-radius: 8px; margin-bottom: 5px; transition: 0.3s; cursor: pointer; }
-        .sidebar a:hover, .sidebar a.active { background: #1e293b; color: #10b981; }
+        .sidebar a:hover, .sidebar a.active { background: #1e293b; color: #2563eb; }
         .main-content { margin-left: 260px; padding: 30px; width: calc(100% - 260px); }
         .card-stat { background: white; border: none; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); padding: 20px; height: 100%; }
         .icon-box { width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 15px; }
@@ -28,8 +28,8 @@
         <!-- Sidebar -->
         <div class="sidebar">
             <div class="d-flex align-items-center gap-3 mb-5 px-2">
-                <div style="width: 40px; height: 40px; border-radius: 50%; border: 2px solid #10b981; background: white; overflow: hidden;">
-                    <img src="<?= URL_ROOT ?>/img/logo.jpg" alt="Logo" style="width: 100%; height: 100%; object-fit: cover;">
+                <div style="width: 40px; height: 40px; border-radius: 50%; border: 2px solid #1e3a8a; background: white; overflow: hidden;">
+                    <img src="<?= URL_ROOT ?>/img/logo_fmd.jpg" alt="Logo" style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
                 <h5 class="mb-0 fw-bold">Secretaria</h5>
             </div>
@@ -54,9 +54,6 @@
                     <?php if(!empty($data['mensagens_painel'])): ?>
                         <span class="badge bg-danger rounded-pill ms-auto" style="font-size: 0.65rem; padding: 0.35em 0.65em;"><?= count($data['mensagens_painel']) ?></span>
                     <?php endif; ?>
-                </a>
-                <a class="nav-link" data-bs-toggle="pill" data-bs-target="#pane-merito" role="tab">
-                    <ion-icon name="ribbon-outline" class="me-2"></ion-icon> Mérito & Certificados
                 </a>
             </nav>
 
@@ -108,7 +105,7 @@
                     <div class="row g-4 mb-5">
                         <div class="col-md-4">
                             <div class="card-stat">
-                                <div class="icon-box" style="background: #ecfdf5; color: #10b981;">
+                                <div class="icon-box" style="background: #eff6ff; color: #1e3a8a;">
                                     <ion-icon name="document-text-outline"></ion-icon>
                                 </div>
                                 <h3 class="fw-bold mb-1"><?= $data['stats']['matriculas_pendentes'] ?? 0 ?></h3>
@@ -135,7 +132,7 @@
                         </div>
                     </div>
                     
-                    <!-- ── ALERTAS DA ADMINISTRAÇÃO (GHS Workflow) ── -->
+                    <!-- ── ALERTAS DA ADMINISTRAÇÃO (FMD Workflow) ── -->
                     <div class="card border-0 shadow-sm rounded-4 p-4">
                         <h5 class="fw-bold mb-3 d-flex align-items-center gap-2 text-dark">
                             <ion-icon name="notifications-circle-outline" class="text-primary fs-4"></ion-icon>
@@ -598,7 +595,7 @@
             }
         }
     </script>
-    <!-- Core Assinaturas GHS -->
+    <!-- Core Assinaturas FMD -->
     <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.1.7/dist/signature_pad.umd.min.js"></script>
     <script src="<?= URL_ROOT ?>/public/js/signatures_core.js"></script>
 
@@ -696,17 +693,27 @@
                     </div>
                     <div class="alert alert-warning border-0 rounded-3 small mt-3">
                         <ion-icon name="key-outline" class="me-1"></ion-icon>
-                        A senha provisória será: <strong>ghs + últimos 4 dígitos do BI</strong>.
+                        A senha provisória será: <strong>fmd + últimos 4 dígitos do BI</strong>.
                     </div>
                 </div>
                 <div class="modal-footer border-0 pb-4">
                     <button type="button" class="btn btn-light px-4 rounded-pill" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="submit" class="btn btn-success px-5 rounded-pill fw-bold shadow-sm">
+                    <button type="submit" class="btn btn-primary px-5 rounded-pill fw-bold shadow-sm" style="background-color: #1e3a8a; border: none;">
                         <ion-icon name="checkmark-circle-outline" class="me-1"></ion-icon> Criar Matrícula
                     </button>
                 </div>
             </form>
         </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('.sidebar a, a[data-bs-toggle="pill"]').on('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            $('html, body').animate({ scrollTop: 0 }, 200);
+        });
+    });
+    </script>
 </body>
 </html>

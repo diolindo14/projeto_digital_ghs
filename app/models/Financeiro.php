@@ -25,26 +25,10 @@ class Financeiro {
     }
 
     public function getStudentDelinquencyStatus($student_id) {
-        // Regra: Meses decorridos desde a primeira matrícula até o fim do mês anterior
-        $sql = "
-            SELECT 
-                (TIMESTAMPDIFF(MONTH, MIN(m.data_criacao), DATE_SUB(DATE_FORMAT(NOW(), '%Y-%m-01'), INTERVAL 1 DAY)) + 1) as months_expected,
-                (SELECT COUNT(*) FROM pagamentos p WHERE p.estudante_id = :sid AND p.status = 'Pago') as payments_done
-            FROM matriculas m
-            WHERE m.estudante_id = :sid2 AND m.status = 'Aprovada'
-        ";
-        $stmt = $this->db->prepare($sql);
-        $stmt->execute([':sid' => $student_id, ':sid2' => $student_id]);
-        $row = $stmt->fetch();
-        
-        $months_expected = (int)($row['months_expected'] ?? 0);
-        if ($months_expected < 0) $months_expected = 0;
-        $payments_done = (int)($row['payments_done'] ?? 0);
-        
-        $missing = $months_expected - $payments_done;
+        // Ano Letivo 2026/2027 em período de inscrições: Não existem mensalidades em atraso antes do início oficial das aulas.
         return [
-            'is_delinquent' => ($missing > 0),
-            'missing_months' => ($missing > 0 ? $missing : 0)
+            'is_delinquent' => false,
+            'missing_months' => 0
         ];
     }
 

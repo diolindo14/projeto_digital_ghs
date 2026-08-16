@@ -44,7 +44,7 @@ class SecretariaController extends Controller {
             return $p['status'] === 'Pendente' && !empty($p['comprovativo_arquivo']);
         });
 
-        // Recupera notificações bidirecionais (GHS Message System)
+        // Recupera notificações bidirecionais (FMD Message System)
         $data['mensagens_painel'] = $this->model('Mensagem')->getUnreadMessages($_SESSION['user_id']);
         $data['mensagens_historico'] = $this->model('Mensagem')->getReceivedMessages($_SESSION['user_id']);
 
@@ -250,7 +250,7 @@ class SecretariaController extends Controller {
             'nacionalidade' => 'Guineense',
             'sexo' => 'M',
             'morada' => 'Bissau',
-            'escola' => 'GHS',
+            'escola' => 'FMD',
             'ano_conclusao' => date('Y'),
             'media' => 0
         ]);

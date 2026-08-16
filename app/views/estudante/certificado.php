@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Certificado de Mérito - GHS</title>
+    <title>Certificado de Mérito — FMD</title>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -126,8 +126,8 @@
         <div class="corner bottom-right"></div>
 
         <div class="header">
-            <img src="<?= URL_ROOT ?>/img/logo.jpg" alt="Logo GHS" class="logo">
-            <div class="institution">Green Hard & Softh</div>
+            <img src="<?= URL_ROOT ?>/img/logo_fmd.jpg" alt="Faculdade Moderna de Direito" class="logo">
+            <div class="institution">Faculdade Moderna de Direito</div>
             <div class="sub-header">Excelência Académica e Reconhecimento</div>
         </div>
 
@@ -159,7 +159,7 @@
                 <?php endif; ?>
                 <div class="sig-line"></div>
                 <div class="sig-name">Validação Institucional</div>
-                <div class="sig-title">GHS CAMPUS</div>
+                <div class="sig-title">FMD</div>
             </div>
             
             <div class="sig-block">
@@ -170,15 +170,15 @@
                     <div style="font-family: 'Playfair Display', serif; font-size: 1.4rem; font-style: italic; color: #1e293b; height: 35px;">Direção Geral</div>
                 <?php endif; ?>
                 <div class="sig-line"></div>
-                <div class="sig-name"><?= htmlspecialchars((string)($data['assinatura'] ?? 'Direção GHS')) ?></div>
+                <div class="sig-name"><?= htmlspecialchars((string)($data['assinatura'] ?? 'Direção FMD')) ?></div>
                 <div class="sig-title">Assinatura Certificada</div>
             </div>
         </div>
         
         <div class="qr-section">
             <?php 
-                $justificativa = "PREMIADO POR EXCELENCIA ACADEMICA: " . ($data['nome'] ?? '') . " atingiu a media de " . number_format((float)($data['media'] ?? 0), 2) . " no " . ($data['periodo'] ?? '') . ", situando-se no Top Elegivel (Lugar " . ($data['posicao_num'] ?? '1') . ") do GHS CAMPUS.";
-                $qrDataString = "CERTIFICADO DE MÉRITO - GHS\n" .
+                $justificativa = "PREMIADO POR EXCELENCIA ACADEMICA: " . ($data['nome'] ?? '') . " atingiu a media de " . number_format((float)($data['media'] ?? 0), 2) . " no " . ($data['periodo'] ?? '') . ", situando-se no Top Elegivel (Lugar " . ($data['posicao_num'] ?? '1') . ") da FMD.";
+                $qrDataString = "CERTIFICADO DE MÉRITO - FMD\n" .
                                 "Estudante: " . ($data['nome'] ?? 'N/A') . "\n" .
                                 "Média Final: " . number_format((float)($data['media'] ?? 0), 2) . "\n" .
                                 "Posição: " . ($data['winner_type'] ?? 'N/A') . "\n" .
@@ -194,7 +194,7 @@
         </div>
         
         <div style="position: absolute; bottom: 10mm; left: 15mm; font-size: 0.7rem; color: #94a3b8;">
-            Data de Emissão: <?= (string)($data['data_emissao'] ?? date('d/m/Y')) ?> | GHS
+            Data de Emissão: <?= (string)($data['data_emissao'] ?? date('d/m/Y')) ?> | FMD
         </div>
     </div>
 

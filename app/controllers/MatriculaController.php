@@ -63,7 +63,7 @@ class MatriculaController extends Controller {
                     'morada' => $_POST['morada'],
                     'encarregado_nome' => $_POST['encarregado_nome'],
                     'encarregado_telefone' => $_POST['encarregado_telefone'],
-                    'escola' => $_POST['escola'] ?? 'GHS (Interno)',
+                    'escola' => $_POST['escola'] ?? 'FMD (Interno)',
                     'ano_conclusao' => $_POST['ano_conclusao'] ?? date('Y'),
                     'media' => $_POST['media'] ?? 0
                 ];

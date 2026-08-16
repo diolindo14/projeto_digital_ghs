@@ -104,6 +104,10 @@ class ProfessorController extends Controller {
         $data['ranking_escola'] = $acadRank->getRankingEscola(3);
         $data['ranking_nivel']  = $acadRank->getRankingByNivel();
 
+        // --- 📸 FOTOGRAFIA DE PERFIL ---
+        $data['foto_perfil'] = $profData['foto_perfil'] ?? null;
+        $_SESSION['foto_perfil'] = $data['foto_perfil'];
+
         $this->view('professor/dashboard', $data);
     }
 

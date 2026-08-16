@@ -603,7 +603,7 @@ class EstudanteController extends Controller {
             'assinatura_secretaria' => $cert['assinatura_secretaria'] ?? null,
             'winner_type' => $posicaoLabel,
             'media'       => (float)$cert['media'],
-            'nivel_nome'  => (string)($cert['nivel_nome'] ?? 'GHS CAMPUS'),
+            'nivel_nome'  => (string)($cert['nivel_nome'] ?? 'FMD'),
             'periodo'     => $semestreLabel . ' — ' . $cert['ano_letivo'],
             'total_certs' => count($certificados),
             'cert_id'     => (int)$cert['id'],

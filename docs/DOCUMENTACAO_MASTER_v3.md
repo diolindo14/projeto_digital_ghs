@@ -1,41 +1,41 @@
-# Documentação Completa: GHS Educational Platform v5.0
+# Documentação Completa: Faculdade Moderna de Direito (FMD) v1.0
 
 ## 1. Visão Geral
-A plataforma GHS é uma solução robusta de gestão académica e financeira. Na versão 5.0, consolidamos o motor de regras pedagógicas e reforçamos as camadas de proteção de dados, oferecendo uma experiência fluida para administradores, professores e alunos.
+A plataforma da **Faculdade Moderna de Direito (FMD)** é uma solução robusta de gestão académica, pedagógica e financeira. O sistema foi migrado e adaptado a partir da base tecnológica original da Green Hard & Soft (GHS), consolidando o motor de regras do curso de Licenciatura em Direito, o sistema de mediação académica de 8 etapas, os certificados de mérito e elevadas camadas de proteção de dados.
 
 ---
 
-## 2. Componentes Estratégicos
+## 2. Componentes Estratégicos e Documentos Oficiais
 
-### 2.1 Resumo Executivo (Gestão)
-Focado no controle institucional e saúde financeira.
-- **Dashboards Visual**: Gráficos de densidade estudantil e distribuição por turnos.
-- **Gestão de Tesouraria**: Conciliação de pagamentos manuais e automáticos.
-- **Audit Logs**: Rastreabilidade total de ações administrativas.
+### 2.1 Resumo Executivo (Gestão Institucional) — `export_admin.php`
+Focado na governação, controlo institucional e saúde operacional.
+- **Visão Geral e Contexto:** Apresentação da FMD e motivação da migração.
+- **Estrutura Académica:** Licenciatura em Direito (4 Anos / 8 Semestres).
+- **Motor de Avaliação:** Regras oficiais de AC1 a AC4 e Exame Final.
+- **Governação & Seguraça:** Matrícula de 48h, Mediação em 8 etapas e RBAC.
 
-### 2.2 Manual do Utilizador (Funcional)
-Experiência de auto-serviço e pedagogia digital.
-- **Horários e Calendário**: Visualização dinâmica e exportação.
-- **Histórico Global**: Registro vitalício de desempenho académico.
-- **Integrador PDF.js**: Visualização segura de documentos sensíveis.
+### 2.2 Manual do Utilizador (Guia Funcional) — `export_funcional.php`
+Experiência de auto-serviço e operacionalização por perfil.
+- **Portal do Estudante:** Candidaturas, matrículas, pautas, recursos, mediações e certidões.
+- **Portal do Professor:** Pautas docentes (AC1-AC4 + Exame), sumários e assiduidade.
+- **Secretaria / Tesouraria:** Validação documental, controlo de propinas e recibos.
+- **Painel de Direção:** Convocatórias, gestão de turmas, comunicados e auditoria.
 
-### 2.3 README Técnico (Desenvolvedor)
-Infraestrutura e segurança de nível bancário.
-- **Security Hardening**: Proteção ativa contra CSRF, XSS, SQLi e IDOR.
-- **Motor Académico**: Algoritmos complexos de progressão (Regra das 3 negativas).
-- **Validação de Registro**: CAPTCHA nativo e verificação de integridade documental (finfo).
-
----
-
-## 3. Manutenção e Suporte
-- **Base de Dados**: MariaDB/MySQL (Dump em `/docs/backups/`).
-- **Logs**: Centralizados em `app/logs/error.log`.
-- **Exportação**: Utilize as ferramentas em `/docs/export_*.php` para gerar manuais em PDF.
+### 2.3 Manual Técnico / Developer Guide — `export_tecnica.php`
+Infraestrutura, código e hardening de segurança.
+- **Arquitetura MVC Native:** PHP 8.2 sem frameworks, PDO MySQL/MariaDB.
+- **Security Hardening:** Proteção ativa contra CSRF, XSS, SQLi, IDOR e Brute Force.
+- **Motor de Regras:** Algoritmo centralizado em `Academico.php` e `Nota.php`.
 
 ---
 
-> [!TIP]
-> **COMO GERAR OS MANUAIS EM PDF**:
-> 1. Aceda via browser aos ficheiros `export_admin.php`, `export_funcional.php` ou `export_tecnica.php`.
-> 2. Pressione `Ctrl + P`.
-> 3. Selecione "Guardar como PDF" para obter os documentos oficiais com a formatação profissional.
+## 3. Como Gerar os Manuais Oficiais em PDF
+
+1. Aceda via browser aos ficheiros `docs/export_admin.php`, `docs/export_funcional.php` ou `docs/export_tecnica.php`.
+2. Pressione `Ctrl + P` (ou comando equivalente no browser).
+3. Selecione "Guardar como PDF" com orientação A4 para obter os documentos impressos profissionais.
+
+---
+
+> [!NOTE]
+> **Nota Histórica de Migração:** A referência à instituição de origem (Green Hard & Soft - GHS) é mantida exclusivamente para efeitos de rastreabilidade técnica no historial do projeto, apresentando a plataforma final uma identidade 100% alinhada com a Faculdade Moderna de Direito (FMD).

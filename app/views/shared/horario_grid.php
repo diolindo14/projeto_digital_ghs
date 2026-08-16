@@ -1,6 +1,6 @@
 <?php
 /**
- * Shared Schedule Grid Partial (Matching PDF Format) - Updated March 2026
+ * Shared Schedule Grid Partial — Faculdade Moderna de Direito (FMD)
  * Usage: include this file after setting $gridData = $horarioModel->buildWeeklyGrid($turma_id)
  * and $turmaInfo = ['codigo' => ..., 'turno' => ..., 'nivel' => ...]
  */
@@ -10,15 +10,15 @@ $diasLabels = ['SEG','TER','QUA','QUI','SEX','SÁB'];
 ?>
 
 <style>
-/* Clean Academic Style */
-.horario-container { font-family: 'Inter', system-ui, -apple-system, sans-serif; color: #1e293b; }
-.grade-table-edu { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid #1e293b; }
-.grade-table-edu th { background-color: #708238; color: #fff; font-weight: 600; text-transform: uppercase; font-size: 0.85rem; padding: 10px 5px; border: 1px solid #1e293b; }
-.grade-table-edu td { border: 1px solid #1e293b; padding: 0; vertical-align: middle; height: 60px; }
+/* Clean Academic Style FMD */
+.horario-container { font-family: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif; color: #0f172a; }
+.grade-table-edu { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid #1e3a8a; }
+.grade-table-edu th { background-color: #1e3a8a; color: #fff; font-weight: 700; text-transform: uppercase; font-size: 0.85rem; padding: 12px 6px; border: 1px solid #1e3a8a; letter-spacing: 0.5px; }
+.grade-table-edu td { border: 1px solid #cbd5e1; padding: 0; vertical-align: middle; height: 60px; }
 
-.col-tempo, .col-hora { text-align: center; font-weight: bold; background: #fff; width: 80px; }
-.tempo-val { font-size: 1.1rem; }
-.hora-val { font-size: 0.75rem; transform: rotate(-25deg); display: inline-block; white-space: nowrap; margin-top: 5px; }
+.col-tempo, .col-hora { text-align: center; font-weight: bold; background: #f8fafc; width: 85px; border-right: 2px solid #1e3a8a; }
+.tempo-val { font-size: 1.1rem; color: #1e3a8a; font-weight: 800; }
+.hora-val { font-size: 0.75rem; color: #475569; display: block; white-space: nowrap; margin-top: 2px; }
 
 /* Slot Design: Two rows */
 .slot-wrapper { display: flex; flex-direction: column; height: 100%; width: 100%; }
@@ -29,7 +29,8 @@ $diasLabels = ['SEG','TER','QUA','QUI','SEX','SÁB'];
     justify-content: center; 
     font-weight: 700; 
     font-size: 0.9rem; 
-    border-bottom: 0.5px solid #1e293b;
+    color: #0f172a;
+    border-bottom: 1px solid #e2e8f0;
     padding: 4px;
 }
 .slot-room { 
@@ -38,8 +39,10 @@ $diasLabels = ['SEG','TER','QUA','QUI','SEX','SÁB'];
     align-items: center; 
     justify-content: center; 
     font-size: 0.8rem; 
-    color: #475569;
+    color: #1e3a8a;
+    font-weight: 600;
     padding: 2px;
+    background-color: #f8fafc;
 }
 
 .slot-empty-edu { 
@@ -49,14 +52,14 @@ $diasLabels = ['SEG','TER','QUA','QUI','SEX','SÁB'];
     height: 100%; width: 100%;
 }
 .slot-empty-edu svg { width: 100%; height: 100%; }
-.slot-empty-edu line { stroke: #1e293b; stroke-width: 1; }
+.slot-empty-edu line { stroke: #cbd5e1; stroke-width: 1; }
 
-.header-info-edu { margin-bottom: 20px; font-weight: bold; font-size: 1.4rem; text-align: center; }
+.header-info-edu { margin-bottom: 20px; font-weight: bold; font-size: 1.4rem; text-align: center; color: #1e3a8a; }
 
 @media print {
     .no-print { display: none !important; }
     .horario-container { padding: 0; }
-    .grade-table-edu th { background-color: #708238 !important; -webkit-print-color-adjust: exact; }
+    .grade-table-edu th { background-color: #1e3a8a !important; color: white !important; -webkit-print-color-adjust: exact; }
 }
 </style>
 
@@ -64,8 +67,8 @@ $diasLabels = ['SEG','TER','QUA','QUI','SEX','SÁB'];
     <div class="d-flex justify-content-between align-items-center mb-4 no-print gap-3 flex-wrap">
         <div class="d-flex align-items-center gap-3">
             <?php if (!empty($turmaInfo)): ?>
-                <h5 class="mb-0 fw-bold">
-                    <ion-icon name="calendar-outline" class="me-1"></ion-icon>
+                <h5 class="mb-0 fw-bold text-dark">
+                    <ion-icon name="calendar-outline" class="me-1 text-primary"></ion-icon>
                     <?= htmlspecialchars($turmaInfo['codigo']) ?> 
                     <span class="text-muted mx-2">|</span> 
                     <small class="text-secondary"><?= htmlspecialchars($turmaInfo['nivel'] ?? '—') ?></small>
@@ -84,7 +87,7 @@ $diasLabels = ['SEG','TER','QUA','QUI','SEX','SÁB'];
                 <?php if (count($uniqueTurmas) > 1): ?>
                     <div class="ms-3 d-flex align-items-center gap-2">
                         <label class="small fw-bold text-muted text-nowrap">Filtrar Turma:</label>
-                        <select class="form-select form-select-sm border-0 shadow-sm bg-light" id="filter-turma-grid" onchange="filterGridByTurma(this.value)" style="width: 150px; border-radius: 8px;">
+                        <select class="form-select form-select-sm border-0 shadow-sm bg-light" id="filter-turma-grid" onchange="filterGridByTurma(this.value)" style="width: 160px; border-radius: 8px;">
                             <option value="all">Todas as Turmas</option>
                             <?php foreach($uniqueTurmas as $tid => $tcod): ?>
                                 <option value="<?= $tid ?>"><?= $tcod ?></option>
@@ -95,32 +98,34 @@ $diasLabels = ['SEG','TER','QUA','QUI','SEX','SÁB'];
             <?php endif; ?>
         </div>
         <div class="d-flex gap-2">
-            <button class="btn btn-sm btn-outline-dark fw-bold px-3 shadow-sm" onclick="window.print()">
-                <ion-icon name="print-outline" class="me-1"></ion-icon> Imprimir Horário
+            <button class="btn btn-sm btn-primary fw-bold px-3 shadow-sm" style="background-color: #1e3a8a; border: none;" onclick="window.print()">
+                <ion-icon name="print-outline" class="me-1"></ion-icon> Imprimir Horário Oficial FMD
             </button>
         </div>
     </div>
 
     <?php if (empty($gridData['tempos'])): ?>
-        <div class="text-center py-5 text-muted border rounded bg-light">
-            <p>Horário ainda não definido.</p>
+        <div class="text-center py-5 text-muted border rounded-3 bg-light">
+            <ion-icon name="calendar-outline" class="fs-1 text-muted mb-2"></ion-icon>
+            <p class="mb-0 fw-semibold">Horário curricular em fase de homologação para esta turma.</p>
         </div>
     <?php else: ?>
 
     <div class="d-none d-print-block">
         <div class="d-flex justify-content-between align-items-center mb-0">
             <div style="width: 150px;">
-                <img src="<?= URL_ROOT ?>/img/logo.jpg" alt="Logo" style="width: 100%;">
+                <img src="<?= URL_ROOT ?>/img/logo_fmd.jpg" alt="Faculdade Moderna de Direito" style="width: 100%; object-fit: contain;">
             </div>
             <div class="text-center flex-grow-1">
-                <h2 style="font-family: serif; font-weight: bold; margin-bottom: 0;">HORÁRIO 2º SEMESTRE 2025-2026</h2>
+                <h2 style="font-family: 'Outfit', sans-serif; font-weight: 800; color: #1e3a8a; margin-bottom: 0;">HORÁRIO ACADÉMICO 2026/2027</h2>
+                <div style="font-size: 0.9rem; font-weight: 700; color: #64748b;">FACULDADE MODERNA DE DIREITO (FMD)</div>
             </div>
-            <div style="width: 150px; text-align: right; font-size: 0.9rem;">
-                <?= date('d/m/Y') ?>
+            <div style="width: 150px; text-align: right; font-size: 0.9rem; color: #475569;">
+                Data: <?= date('d/m/Y') ?>
             </div>
         </div>
-        <div class="text-center mb-3" style="font-size: 1.25rem; font-weight: 800; font-family: 'Outfit', sans-serif; border-top: 3px solid #1a1a1a; padding-top: 15px; margin-top: 15px; color: #1a1a1a; text-transform: uppercase;">
-            (Grupo: GHS-<span id="print-turma-label"><?= htmlspecialchars(str_replace('GHS-', '', $turmaInfo['codigo'] ?? 'N/A')) ?></span> | HORARIO | Nivel: <span id="print-nivel-label"><?= htmlspecialchars($turmaInfo['nivel'] ?? 'ANO') ?></span>)
+        <div class="text-center mb-3" style="font-size: 1.15rem; font-weight: 800; font-family: 'Outfit', sans-serif; border-top: 3px solid #1e3a8a; padding-top: 12px; margin-top: 12px; color: #0f172a; text-transform: uppercase;">
+            (TURMA: <span id="print-turma-label"><?= htmlspecialchars($turmaInfo['codigo'] ?? 'FMD-1M1') ?></span> | HORÁRIO CURRICULAR | NÍVEL: <span id="print-nivel-label"><?= htmlspecialchars($turmaInfo['nivel'] ?? '1.º ANO') ?></span>)
         </div>
     </div>
 
@@ -167,8 +172,8 @@ $diasLabels = ['SEG','TER','QUA','QUI','SEX','SÁB'];
         </table>
     </div>
     
-    <div class="mt-4 text-center d-none d-print-block" style="font-family: serif; font-style: italic; font-size: 1.2rem;">
-        O FUTURO É HOJE
+    <div class="mt-4 text-center d-none d-print-block" style="font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 1.1rem; color: #1e3a8a; letter-spacing: 1px;">
+        CIÊNCIA • ÉTICA • RIGOR • JÚRIS
     </div>
 
     <?php endif; ?>
@@ -178,37 +183,11 @@ $diasLabels = ['SEG','TER','QUA','QUI','SEX','SÁB'];
 function filterGridByTurma(turmaId) {
     const slots = document.querySelectorAll('.slot-container-grid');
     slots.forEach(slot => {
-        const slotTurmaId = slot.getAttribute('data-turma-id');
-        const wrapper = slot.querySelector('.slot-wrapper');
-        const empty = slot.querySelector('.slot-empty-edu');
-        
-        if (!wrapper || !empty) return;
-
-        if (turmaId === 'all') {
-            // Show if it has content
-            if (slotTurmaId) {
-                wrapper.style.display = 'flex';
-                empty.style.display = 'none';
-            } else {
-                 wrapper.style.display = 'none';
-                 empty.style.display = 'flex';
-            }
-        } else if (slotTurmaId === turmaId) {
-            wrapper.style.display = 'flex';
-            empty.style.display = 'none';
+        if (turmaId === 'all' || slot.getAttribute('data-turma-id') === turmaId) {
+            slot.style.opacity = '1';
         } else {
-            wrapper.style.display = 'none';
-            empty.style.display = 'flex';
+            slot.style.opacity = '0.2';
         }
     });
-
-    // Update Print Header if needed (optional)
-    const filterSelect = document.getElementById('filter-turma-grid');
-    const selectedText = filterSelect ? filterSelect.options[filterSelect.selectedIndex].text : '';
-    const printTurmaLabel = document.getElementById('print-turma-label');
-    if (printTurmaLabel) {
-        printTurmaLabel.innerText = turmaId === 'all' ? '<?= htmlspecialchars($turmaInfo['codigo'] ?? "N/A") ?>' : selectedText;
-    }
 }
 </script>
-

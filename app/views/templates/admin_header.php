@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-PT">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GHS - Painel Administrativo</title>
+    <title>FMD — Painel Administrativo</title>
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- DataTables CSS -->
@@ -18,7 +18,7 @@
         .sidebar { min-height: 100vh; background-color: #0B1120; color: white; padding-top: 20px; }
         .sidebar h4 { color: white; font-weight: 700; margin-bottom: 30px; }
         .sidebar .nav-link { color: #94A3B8; display: flex; align-items: center; gap: 10px; padding: 12px 20px; font-weight: 500; transition: 0.3s; }
-        .sidebar .nav-link:hover, .sidebar .nav-link.active { background-color: #1E293B; color: #10B981; border-left: 4px solid #10B981; }
+        .sidebar .nav-link:hover, .sidebar .nav-link.active { background-color: #1E293B; color: #4F80E1; border-left: 4px solid #4F80E1; }
         .sidebar ion-icon { font-size: 1.25rem; }
         .content { padding: 30px; }
     </style>
@@ -28,9 +28,10 @@
     <div class="row">
         <!-- Sidebar Navigation -->
         <nav class="col-md-3 col-lg-2 d-md-block sidebar collapse">
-            <h4 class="text-center">
-                <ion-icon name="leaf" style="color: #10B981;"></ion-icon> Portal Green
-            </h4>
+            <div class="text-center mb-3 pt-3">
+                <img src="<?= URL_ROOT ?>/img/logo_fmd.jpg" alt="FMD" style="max-height:55px; object-fit:contain; margin-bottom:8px;">
+                <h4 style="font-size:0.85rem; color:#94A3B8; letter-spacing:1px; text-transform:uppercase; margin:0;">Portal FMD</h4>
+            </div>
             <div class="position-sticky mt-4">
                 <ul class="nav flex-column">
                     <li class="nav-item">
@@ -40,7 +41,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#alunos">
-                            <ion-icon name="people-outline"></ion-icon> Gestão de Alunos
+                            <ion-icon name="people-outline"></ion-icon> Gestão de Estudantes
                         </a>
                     </li>
                     <li class="nav-item">

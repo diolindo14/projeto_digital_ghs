@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-PT">
 <head>
     <script>
         window.activeAuthView = "<?= $_SESSION['active_view'] ?? 'view-login' ?>";
@@ -7,7 +7,7 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Green - Autenticação Institucional</title>
+    <title>FMD — Autenticação Institucional</title>
     <meta name="description" content="Portal de acesso institucional com gestão avançada de permissões e segurança.">
     
     <!-- Google Fonts -->
@@ -36,13 +36,13 @@
         <div class="auth-box glass-panel" style="position: relative;">
             
             <!-- Voltar ao Site -->
-            <a href="<?= URL_ROOT ?>/" style="position: absolute; top: 25px; left: 25px; text-decoration: none; color: #64748b; display: flex; align-items: center; gap: 5px; font-size: 0.95rem; font-weight: 600; transition: color 0.3s;" onmouseover="this.style.color='#10b981'" onmouseout="this.style.color='#64748b'">
+            <a href="<?= URL_ROOT ?>/" style="position: absolute; top: 25px; left: 25px; text-decoration: none; color: #64748b; display: flex; align-items: center; gap: 5px; font-size: 0.95rem; font-weight: 600; transition: color 0.3s;" onmouseover="this.style.color='#1e3a8a'" onmouseout="this.style.color='#64748b'">
                 <ion-icon name="arrow-back-outline"></ion-icon> Voltar ao Site
             </a>
 
             <!-- Branding -->
             <div class="brand" style="margin-bottom: 1.5rem;">
-                <img src="<?= URL_ROOT ?>/img/logo.jpg" alt="Green Hard & Softh" style="max-width: 180px; height: auto; display: block; margin: 0 auto;">
+                <img src="<?= URL_ROOT ?>/img/logo_fmd.jpg" alt="Faculdade Moderna de Direito" style="max-width: 180px; height: auto; display: block; margin: 0 auto;">
             </div>
 
             <!-- Login View -->
@@ -56,7 +56,7 @@
                     </p>
                 <?php endif; ?>
                 <?php if(isset($_SESSION['flash_success'])): ?>
-                    <p style="color:#10b981; margin-bottom:1rem; text-align:center;">
+                    <p style="color:#2563eb; margin-bottom:1rem; text-align:center;">
                         <ion-icon name="checkmark-circle"></ion-icon> <?= $_SESSION['flash_success']; unset($_SESSION['flash_success']); ?>
                     </p>
                 <?php endif; ?>
@@ -114,7 +114,7 @@
                 <div class="input-group">
                     <ion-icon name="mail-outline"></ion-icon>
                     <input type="email" name="email" id="reg-email" class="input-field" placeholder=" " required>
-                    <label for="reg-email">Email (ex: ghsespf@hotmail.com)</label>
+                    <label for="reg-email">Email institucional</label>
                 </div>
 
                 <input type="hidden" name="tipo" value="estudante">

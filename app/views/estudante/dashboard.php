@@ -1,10 +1,10 @@
 <?php /** @var $this Controller */ ?>
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-PT">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal Estudante - GHS</title>
+    <title>Portal Estudante — FMD</title>
     <!-- CSS Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -17,7 +17,8 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <style>
         :root {
-            --ghs-primary: #10B981;
+            --fmd-primary: #1e3a8a;
+            --ghs-primary: #1e3a8a;
             --ghs-secondary: #3B82F6;
             --ghs-dark: #0F172A;
             --ghs-slate: #1E293B;
@@ -75,9 +76,9 @@
         <div>
             <div class="sidebar-brand text-center mb-4 mt-2 border-bottom border-light border-opacity-10 pb-3">
                 <div style="width: 64px; height: 64px; border-radius: 50%; border: 2px solid var(--ghs-primary); display: flex; align-items: center; justify-content: center; background: #fff; margin: 0 auto; overflow: hidden;">
-                    <img src="<?= URL_ROOT ?>/img/logo.jpg" alt="Logo GHS" style="width: 100%; height: 100%; object-fit: cover;">
+                    <img src="<?= URL_ROOT ?>/img/logo_fmd.jpg" alt="Faculdade Moderna de Direito" style="width: 100%; height: 100%; object-fit: contain;">
                 </div>
-                <h5 class="fw-bold text-white mb-1 mt-3" style="font-size: .95rem;">Green Hard & Softh</h5>
+                <h5 class="fw-bold text-white mb-1 mt-3" style="font-size: .95rem;">Faculdade Moderna de Direito</h5>
                 <span class="badge" style="background:rgba(16,185,129,.15); color:var(--ghs-primary); border:1px solid rgba(16,185,129,.3); font-size: .65rem; letter-spacing: .06em;">PORTAL ESTUDANTE</span>
             </div>
             
@@ -88,7 +89,6 @@
                 <a class="nav-link" id="tab-historico" data-bs-toggle="pill" data-bs-target="#pane-historico" role="tab"><ion-icon name="document-text-outline"></ion-icon> Histórico Académico</a>
                 <a class="nav-link" id="tab-materiais" data-bs-toggle="pill" data-bs-target="#pane-materiais" role="tab"><ion-icon name="folder-open-outline"></ion-icon> Materiais Didáticos</a>
                 <a class="nav-link" id="tab-sumarios" data-bs-toggle="pill" data-bs-target="#pane-sumarios" role="tab"><ion-icon name="reader-outline"></ion-icon> Sumários de Aula</a>
-                <a class="nav-link" id="tab-merito" data-bs-toggle="pill" data-bs-target="#pane-merito" role="tab"><ion-icon name="ribbon-outline" class="text-warning"></ion-icon> Mérito & Diplomas</a>
                 <a class="nav-link" id="tab-financeiro" data-bs-toggle="pill" data-bs-target="#pane-financeiro" role="tab"><ion-icon name="wallet-outline"></ion-icon> Pagamentos</a>
                 <a class="nav-link" id="tab-comunicados" data-bs-toggle="pill" data-bs-target="#pane-comunicados" role="tab"><ion-icon name="notifications-outline"></ion-icon> Comunicados & Alertas</a>
                 <hr class="text-white opacity-25">
@@ -255,7 +255,7 @@
                             $isFst    = $cert['posicao'] === '1';
                             $semLabel = $cert['semestre'] === '1' ? '1º Semestre' : '2º Semestre';
                             $anoLabel = $cert['ano_letivo'];
-                            $gradStart= $isFst ? '#F59E0B' : '#10B981';
+                            $gradStart= $isFst ? '#F59E0B' : '#1e3a8a';
                             $gradEnd  = $isFst ? '#EF4444' : '#3B82F6';
                             $shadowC  = $isFst ? 'rgba(245,158,11,0.3)' : 'rgba(16,185,129,0.25)';
                             $emoji    = $isFst ? '🥇' : '🥈';
@@ -372,7 +372,7 @@
                                 <div class="stat-icon <?= $data['smart_delinquency']['is_delinquent'] ? 'bg-danger' : 'bg-info' ?> bg-opacity-10 <?= $data['smart_delinquency']['is_delinquent'] ? 'text-danger' : 'text-info' ?> mx-auto mb-3">
                                     <ion-icon name="wallet-outline"></ion-icon>
                                 </div>
-                                <h6 class="text-muted small fw-bold mb-2 opacity-75">Estivados & Propina</h6>
+                                <h6 class="text-muted small fw-bold mb-2 opacity-75">Situação Financeira</h6>
                                 <?php if ($data['smart_delinquency']['is_delinquent']): ?>
                                     <div class="badge bg-danger bg-opacity-10 text-danger border border-danger border-opacity-25 rounded-pill mb-1 p-2 px-3 fw-bold">IRREGULAR</div>
                                     <div class="text-danger fw-bold" style="font-size: 0.8rem;"><?= $data['smart_delinquency']['missing_months'] ?> meses em falta</div>
@@ -1304,11 +1304,13 @@ $(document).ready(function() {
         }
     });
 
-    // Close when clicking a nav-link on mobile
-    $('.sidebar .nav-link').on('click', function() {
+    // Close when clicking a nav-link and automatically scroll content to top immediately
+    $('.sidebar .nav-link, a[data-bs-toggle="pill"]').on('click', function() {
         if (window.innerWidth <= 991) {
             sidebar.removeClass('active');
         }
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        $('html, body').animate({ scrollTop: 0 }, 200);
     });
 });
 

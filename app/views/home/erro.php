@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Erro Técnico - GHS</title>
+    <title>Erro Técnico - FMD</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
@@ -37,7 +37,7 @@
                 </a>
             </div>
             <p class="mt-4 small text-muted">
-                Se o erro persistir, contacte o suporte técnico da GHS.
+                Se o erro persistir, contacte o suporte técnico da Faculdade Moderna de Direito.
             </p>
         </div>
     </div>

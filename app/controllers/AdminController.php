@@ -63,7 +63,7 @@ class AdminController extends Controller {
 
         $data['secretarios'] = $this->model('Administrador')->getAllSecretarios();
         
-        // Recupera notificações de sistema (GHS Workflow) para feedback imediato no widget
+        // Recupera notificações de sistema (FMD Workflow) para feedback imediato no widget
         $data['mensagens_painel'] = $this->model('Mensagem')->getUnreadMessages($_SESSION['user_id']);
         $data['mensagens_historico'] = $this->model('Mensagem')->getReceivedMessages($_SESSION['user_id']);
         
@@ -1129,7 +1129,7 @@ class AdminController extends Controller {
         }
 
         $titulo = "🏆 Melhores Alunos do {$semestre}º Semestre {$ano_letivo}";
-        $corpo  = "A Direção do GHS tem o prazer de anunciar os melhores alunos do {$semestre}º Semestre do Ano Letivo {$ano_letivo}:{$premiadosTexto}\n\nOs alunos distinguidos encontrarão o seu Certificado de Mérito disponível no Portal do Estudante para visualização e impressão.\n\nParabéns a todos os premiados pelo empenho e dedicação!";
+        $corpo  = "A Direção da Faculdade Moderna de Direito (FMD) tem o prazer de anunciar os melhores alunos do {$semestre}º Semestre do Ano Letivo {$ano_letivo}:{$premiadosTexto}\n\nOs alunos distinguidos encontrarão o seu Certificado de Mérito disponível no Portal do Estudante para visualização e impressão.\n\nParabéns a todos os premiados pelo empenho e dedicação!";
 
         $comunicadoModel = $this->model('Comunicado');
         
